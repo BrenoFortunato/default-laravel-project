@@ -1,4 +1,4 @@
-# Projeto Padrão em Laravel
+# Default Laravel Project
 Projeto padrão configurado em Docker utilizando PHP v7.4, Laravel v8.12, InfyOm v8.0 e AdminLTE v3.0.5.
   
 ## Instalação
