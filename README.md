@@ -47,3 +47,4 @@ Após a geração dos CRUDs, verificar os arquivos criados conforme as orientaç
 - Atualizar ícones do menu lateral
 - Atualizar cores em "public/css/custom_colors.css"
 - Atualizar e-mails em "resources/views/vendor/notifications"
+- Procurar no código por "TODO:" e corrigir o que for necessário
