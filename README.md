@@ -2,7 +2,7 @@
 Projeto padrão configurado em Docker utilizando PHP v7.4, Laravel v8.12, InfyOm v8.0 e AdminLTE v3.0.5.
   
 ## Instalação
-Após clonar este repositório, remova as configurações do git com:
+Após clonar este repositório, renomeie a pasta para o nome do projeto e remova as configurações do git com:
 ```php
 rm -rf .git
 ```
