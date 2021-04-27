@@ -1,0 +1,7 @@
+{{-- $FIELD_NAME_TITLE$ Field --}}
+<div class="form-group col-md-12">
+    <div class="icheck-material-primary">
+        $CHECKBOXES$
+        {{ Form::label("$FIELD_NAME$", \Lang::get("attributes.$FIELD_NAME$")) }}
+    </div>
+</div>

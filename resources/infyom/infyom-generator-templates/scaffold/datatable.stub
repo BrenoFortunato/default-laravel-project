@@ -1,0 +1,63 @@
+<?php
+
+namespace $NAMESPACE_DATATABLES$;
+
+use $NAMESPACE_MODEL$\$MODEL_NAME$;
+use App\Services\DataTablesDefaults;
+use Yajra\DataTables\Datatables;
+use Yajra\DataTables\Services\DataTable;
+
+class $MODEL_NAME$DataTable extends DataTable
+{
+    /**
+     * Build DataTable class
+     *
+     * @return \Yajra\DataTables\Datatables
+     */
+    public function dataTable()
+    {
+        $$MODEL_NAME_PLURAL_CAMEL$ = $MODEL_NAME$::select(
+            "$MODEL_NAME_PLURAL_SNAKE$.*"
+        );
+
+        return DataTables::of($$MODEL_NAME_PLURAL_CAMEL$)
+            ->addColumn("action", "$VIEW_PREFIX$$MODEL_NAME_PLURAL_SNAKE$.datatables_actions")
+            ->rawColumns(["action"]);
+    }
+
+    /**
+     * Optional method if you want to use html builder
+     *
+     * @return \Yajra\DataTables\Html\Builder
+     */
+    public function html()
+    {
+        return $this->builder()
+            ->minifiedAjax()
+            ->columns($this->getColumns())
+            ->addAction(["width" => "75px", "printable" => false, "title" => \Lang::get("datatables.action")])
+            ->parameters(DataTablesDefaults::getParameters());
+    }
+
+    /**
+     * Get columns
+     *
+     * @return array
+     */
+    protected function getColumns()
+    {
+        return [
+            $DATATABLE_COLUMNS$,
+        ];
+    }
+
+    /**
+     * Get filename for export
+     *
+     * @return string
+     */
+    protected function filename()
+    {
+        return \Lang::choice("tables.$MODEL_NAME_PLURAL_SNAKE$", "p")." ".date('d.m.Y H\hi\m');
+    }
+}

@@ -1,0 +1,50 @@
+version: "3.8"
+services:
+
+  application:
+    build:
+      context: .
+      args:
+        - UID=${UID}
+        - GID=${GID}
+        - APP_ENV=development
+    volumes:
+      - ./:/var/www/html
+      - storage-data:/var/www/html/storage
+    ports:
+      - "80:8000"
+      - "9001:9001"
+    depends_on:
+      - database
+      - redis
+
+  database:
+    image: mysql:5.7
+    command: ['--character-set-server=utf8mb4', '--collation-server=utf8mb4_unicode_ci']
+    environment:
+      - MYSQL_DATABASE=changeme
+      - MYSQL_ROOT_PASSWORD=root
+      - TZ=America/Sao_Paulo
+    ports:
+      - "33306:3306"
+    volumes:
+      - database-data:/var/lib/mysql
+
+  redis:
+    image: redis:4.0.5-alpine
+    command: ["redis-server", "--appendonly", "yes"]
+    volumes:
+      - redis-data:/data
+
+volumes:
+  database-data:
+    driver: "local"
+  redis-data:
+    driver: "local"
+  storage-data:
+    driver: "local"
+
+networks:
+  default:
+    external:
+      name: default-docker-network

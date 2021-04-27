@@ -1,0 +1,6 @@
+{{-- $MODEL_NAME$ TODO: Fix request::is --}}
+<li class="nav-item">
+    <a href="{{ route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.index') }}" class="nav-link {{ Request::is('$ROUTE_PREFIX$$MODEL_NAME_PLURAL_CAMEL$*') ? 'active' : '' }}">
+        <i class="fas fa-edit sidebar-icons"></i><p>{{ \Lang::choice("tables.$MODEL_NAME_PLURAL_SNAKE$", "p") }}</p>
+    </a>
+</li>

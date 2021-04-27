@@ -1,0 +1,144 @@
+<?php
+
+namespace $NAMESPACE_CONTROLLER$;
+
+use Flash;
+use Response;
+use $NAMESPACE_DATATABLES$\$MODEL_NAME$DataTable;
+use $NAMESPACE_REPOSITORY$\$MODEL_NAME$Repository;
+use $NAMESPACE_REQUEST$\Create$MODEL_NAME$Request;
+use $NAMESPACE_REQUEST$\Update$MODEL_NAME$Request;
+use $NAMESPACE_APP$\Http\Controllers\AppBaseController;
+
+class $MODEL_NAME$Controller extends AppBaseController
+{
+    private $$MODEL_NAME_CAMEL$Repository;
+
+    /**
+     * Create a new controller instance
+     * 
+     * @param $MODEL_NAME$Repository $$MODEL_NAME_CAMEL$Repo
+     *
+     * @return void
+     */
+    public function __construct($MODEL_NAME$Repository $$MODEL_NAME_CAMEL$Repo)
+    {
+        $this->$MODEL_NAME_CAMEL$Repository = $$MODEL_NAME_CAMEL$Repo;
+    }
+
+    /**
+     * Display a listing of the $MODEL_NAME$
+     *
+     * @param $MODEL_NAME$DataTable $$MODEL_NAME_CAMEL$DataTable
+
+     * @return Response
+     */
+    public function index($MODEL_NAME$DataTable $$MODEL_NAME_CAMEL$DataTable)
+    {
+        return $$MODEL_NAME_CAMEL$DataTable->render("$VIEW_PREFIX$$MODEL_NAME_PLURAL_SNAKE$.index");
+    }
+
+    /**
+     * Show the form for creating a new $MODEL_NAME$
+     *
+     * @return Response
+     */
+    public function create()
+    {
+        return view("$VIEW_PREFIX$$MODEL_NAME_PLURAL_SNAKE$.create");
+    }
+
+    /**
+     * Store a newly created $MODEL_NAME$ in storage
+     *
+     * @param Create$MODEL_NAME$Request $request
+     *
+     * @return Response
+     */
+    public function store(Create$MODEL_NAME$Request $request)
+    {
+        $input = $request->all();
+        $this->$MODEL_NAME_CAMEL$Repository->create($input);
+
+        Flash::success(\Lang::choice("tables.$MODEL_NAME_PLURAL_SNAKE$", "s")." ".\Lang::choice("flash.saved", "TODO:"));
+        return redirect(route("$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.index"));
+    }
+
+    /**
+     * Display the specified $MODEL_NAME$
+     *
+     * @return Response
+     */
+    public function show()
+    {
+        $$MODEL_NAME_CAMEL$ = $this->$MODEL_NAME_CAMEL$Repository->find(request()->$MODEL_NAME_SNAKE$_id);
+        if (empty($$MODEL_NAME_CAMEL$)) {
+            Flash::error(\Lang::choice("tables.$MODEL_NAME_PLURAL_SNAKE$", "s")." ".\Lang::choice("flash.not_found", "TODO:"));
+            return redirect(route("$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.index"));
+        }
+
+        return view("$VIEW_PREFIX$$MODEL_NAME_PLURAL_SNAKE$.show", compact("$MODEL_NAME_CAMEL$"));
+    }
+
+    /**
+     * Show the form for editing the specified $MODEL_NAME$
+     *
+     * @return Response
+     */
+    public function edit()
+    {
+        $$MODEL_NAME_CAMEL$ = $this->$MODEL_NAME_CAMEL$Repository->find(request()->$MODEL_NAME_SNAKE$_id);
+        if (empty($$MODEL_NAME_CAMEL$)) {
+            Flash::error(\Lang::choice("tables.$MODEL_NAME_PLURAL_SNAKE$", "s")." ".\Lang::choice("flash.not_found", "TODO:"));
+            return redirect(route("$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.index"));
+        }
+
+        return view("$VIEW_PREFIX$$MODEL_NAME_PLURAL_SNAKE$.edit", compact("$MODEL_NAME_CAMEL$"));
+    }
+
+    /**
+     * Update the specified $MODEL_NAME$ in storage
+     *
+     * @param Update$MODEL_NAME$Request $request
+     *
+     * @return Response
+     */
+    public function update(Update$MODEL_NAME$Request $request)
+    {
+        $$MODEL_NAME_CAMEL$ = $this->$MODEL_NAME_CAMEL$Repository->find(request()->$MODEL_NAME_SNAKE$_id);
+        if (empty($$MODEL_NAME_CAMEL$)) {
+            Flash::error(\Lang::choice("tables.$MODEL_NAME_PLURAL_SNAKE$", "s")." ".\Lang::choice("flash.not_found", "TODO:"));
+            return redirect(route("$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.index"));
+        }
+
+        $input = $request->all();
+        $$MODEL_NAME_CAMEL$ = $this->$MODEL_NAME_CAMEL$Repository->update($input, $$MODEL_NAME_CAMEL$->id);
+
+        Flash::success(\Lang::choice("tables.$MODEL_NAME_PLURAL_SNAKE$", "s")." ".\Lang::choice("flash.updated", "TODO:"));
+        return redirect(route("$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.index"));
+    }
+
+    /**
+     * Remove the specified $MODEL_NAME$ from storage
+     *
+     * @return Response
+     */
+    public function destroy()
+    {
+        $$MODEL_NAME_CAMEL$ = $this->$MODEL_NAME_CAMEL$Repository->find(request()->$MODEL_NAME_SNAKE$_id);
+        if (empty($$MODEL_NAME_CAMEL$)) {
+            Flash::error(\Lang::choice("tables.$MODEL_NAME_PLURAL_SNAKE$", "s")." ".\Lang::choice("flash.not_found", "TODO:"));
+            return redirect(route("$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.index"));
+        }
+
+        try { 
+            $this->$MODEL_NAME_CAMEL$Repository->delete($$MODEL_NAME_CAMEL$->id);
+        } catch(\Exception $e) {
+            Flash::error(\Lang::choice("tables.$MODEL_NAME_PLURAL_SNAKE$", "s")." ".\Lang::choice("flash.not_deleted", "TODO:"));
+            return redirect(route("$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.index"));
+        }
+
+        Flash::success(\Lang::choice("tables.$MODEL_NAME_PLURAL_SNAKE$", "s")." ".\Lang::choice("flash.deleted", "TODO:"));
+        return redirect(route("$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.index"));
+    }
+}

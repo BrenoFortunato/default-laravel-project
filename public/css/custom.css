@@ -1,0 +1,715 @@
+/* Select2 */
+.select2 {
+    width: 100% !important;
+}
+.select2-container--default .select2-selection--single {
+    height: 38px;
+}
+.select2-results__option {
+    padding-left: 12px;
+    padding-right: 12px
+}
+.select2-search__field {
+    padding-left: 6px !important;
+    padding-right: 6px !important;
+}
+.select2-container .select2-selection--single {
+    height: 38px;
+    padding: 6px 12px;
+}
+.select2-container .select2-selection--single .select2-selection__rendered {
+    padding-left: 0;
+    margin-top: -7px;
+    line-height: 38px;
+}
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    padding: 0;
+}
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 38px;
+}
+.select2-results__option {
+    padding: 6px 12px;
+}
+.select2-dropdown {
+    border-top: 0;
+}
+.select2-dropdown.select2-dropdown--below {
+    display: inline-block;
+    border-radius: 0;
+}
+.select2-selection--multiple {
+    border-radius: 0 !important;
+}
+.select2-selection__choice__remove {
+    vertical-align: 20% !important;
+}
+
+
+
+
+/* iCheck */
+[class*="icheck-"] {
+    margin: 0 !important;
+}
+[class*="icheck-"] input:first-child:active {
+    opacity: 0 !important;
+}
+[class*="icheck-"] label {
+    font-weight: normal !important;
+}
+.icheck-material-primary + .icheck-material-primary {
+    margin-top: 2px !important;
+}
+.icheck-material-primary + .custom-file {
+    margin-top: 10px !important;
+}
+.icheck-material-primary:last-child {
+    margin-bottom: -8px !important;
+}
+.icheck-material-primary > input:first-child:not(:checked):not(:disabled):hover + label::before,
+.icheck-material-primary > input:first-child:not(:checked):not(:disabled):hover + input[type="hidden"] + label::before {
+    border-width: 1px;
+}
+
+
+
+
+/* Custom file input */
+input[type="file"] {
+    text-indent: -100%;
+}
+.custom-file-input {
+    cursor: pointer !important;
+}
+.custom-file-label {
+    margin-bottom: 0;
+}
+.custom-file-label::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f574";
+}
+.img-thumbnail + .custom-file {
+    margin-top: 12px !important;
+}
+
+
+
+
+/* Remove margin and padding */
+.no-margin {
+    margin: 0 !important;
+}
+.no-padding {
+    padding: 0 !important;
+}
+section.content {
+    padding: 15px !important;
+}
+
+/* Change blockquote default css */
+blockquote {
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: inherit;
+}
+
+/* Remove margin from breadcrumbs */
+ol.breadcrumb {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: left;
+    flex-wrap: wrap;
+    margin-bottom: 0;
+    border-radius: 0;
+    padding: 10px 15px 5px 15px;
+}
+ol.breadcrumb > li+li::before {
+    content: ">";
+    padding: 0 5px;
+}
+
+/* Change BR height */
+br {
+    content: "";
+    display: block;
+    margin: 2.5px 0;
+}
+
+/* Checkbox fix */
+input[type="checkbox"]{
+    vertical-align: text-bottom;
+    margin-right: 5px;
+}
+.checkbox-button-label{
+    font-weight: normal;
+    margin-bottom: 2px;
+}
+
+/* Radio button fix */
+input[type="radio"]{
+    vertical-align:text-bottom;
+    margin-right:5px;
+}
+.radio-button-label {
+    font-weight: normal;
+    margin-bottom: 2px;
+    display: block;
+}
+
+/* Fix file input */
+input[type="file"]{
+    padding: 0 !important;
+}
+
+/* Fix tooltip alignment */
+.tooltip {
+    top: 0;
+}
+
+/* Change cursor type of readonly text input */
+input[type=text]:read-only {
+    cursor: not-allowed;
+}
+input[type=text]:-moz-read-only {
+    cursor: not-allowed;
+}
+
+/* Hide spin buttons on number fields */
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+/* Form highlight */
+.form-control:focus {
+	box-shadow: none;
+}
+
+
+
+
+/* Sidebar logo */
+.brand-link {
+    display: flex;
+    justify-content: center;
+    padding: 13px;
+}
+.brand-image {
+    margin: 0 !important;
+    float: none !important;
+    max-height: 30px !important;
+}
+
+/* Sidebar items */
+.nav-item {
+    margin-bottom: 5px !important;
+}
+.nav-link {
+    margin-bottom: 0 !important;
+}
+
+/* Sidebar menu icons */
+.sidebar-icons {
+    width: 20px;
+    font-size: 16px;
+    text-align: center;
+    margin-right: 10px;
+}
+.sidebar-icons-treeview {
+    width: 15px;
+    font-size: 13px;
+    text-align: center;
+    margin-right: 10px;
+
+}
+.sidebar-icons-treeview-2 {
+    width: 10px;
+    font-size: 10px;
+    text-align: center;
+    margin-right: 10px;
+}
+
+/* Sidebar treeview */
+.treeview-link {
+    font-size: 13px !important;
+    vertical-align: middle !important;
+    padding-left: 25px !important;
+    padding-top: 6px !important;
+    padding-bottom: 6px !important;
+}
+.treeview-link-2 {
+    font-size: 12px !important;
+    vertical-align: middle !important;
+    padding-left: 20px !important;
+    padding-top: 3px !important;
+    padding-bottom: 3px !important;
+}
+
+/* User dropdowm menu */
+.navbar-nav .dropdown-menu {
+    top: 46px !important;
+    right: -8px !important;
+}
+.user-image.img-circle {
+    margin-top: -5px !important;
+}
+
+/* Footer */
+.main-footer {
+    color: #00000080;
+    text-align: center;
+    font-weight: bold;
+}
+
+
+
+
+/* Datatable container header (where the table name appears) */
+.content-header {
+    padding: 10px 15px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.content-header h1 {
+    font-size: 24px !important;
+}
+.title-header {
+    font-weight: 900;
+    letter-spacing: 2px;
+}
+.title-header-small {
+    font-size: 16px !important;
+    font-weight: 900;
+    letter-spacing: 0.5px;
+    vertical-align: middle !important;
+}
+
+/* Datatable container header button */
+.table-header-button {
+    font-size: 14px;
+    border-radius: 5px;
+    border-width: 1px;
+    border-style: solid;
+    padding: 2.5px 5px;
+    font-weight: bold;
+}
+.table-header-icon {
+    padding-right: 5px;
+    font-size: 12px;
+    margin-top: -2px;
+}
+.table-header-text {
+    font-size: 13px;
+}
+
+/* Datatable header */
+.dataTables_scrollHead .table-bordered {
+    border-top: 0;
+}
+.dataTables_scrollHead table.dataTable {
+    margin-top: 10px !important;
+}
+
+/* Datatable processing info */
+.dataTables_processing {
+    z-index: 1;
+    top: 35% !important;
+}
+
+/* Datatable bottom info */
+.dataTables_info {
+    padding: 0 !important;
+    margin-top: 10px;
+    margin-bottom: 5px;
+}
+
+/* Datatable paginate buttons */
+.dataTables_paginate .pagination {
+    margin: 0 !important;
+}
+.dataTables_paginate .pagination .page-link:focus {
+    box-shadow: none;
+}
+.dataTables_paginate .pagination .disabled {
+    cursor: not-allowed;
+}
+
+/* Datatable buttons */
+.datatable-icons {
+    margin-right: 5px;
+    vertical-align: center;
+}
+.dt-buttons .btn-secondary {
+    height: 100%;
+    flex: none;
+}
+@media screen and (max-width: 767px){
+    .dt-buttons {
+        justify-content: center;
+        margin-bottom: 0 !important;
+    }
+}
+
+/* Datatable filter */
+.dataTables_filter label {
+    margin-bottom: 0;
+}
+.dataTables_filter {
+    float: right;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+.dataTables_filter input {
+    margin-left: 0 !important;
+}
+@media screen and (max-width: 767px){
+    .dataTables_filter {
+        float: none;
+        margin-top: 5px;
+        margin-bottom: 0;
+    }
+}
+
+/* Datatable action buttons */
+table.dataTable th:last-child {
+    width: 75px;
+    min-width: 50px;
+}
+table.dataTable .btn-group a, 
+table.dataTable .btn-group button {
+    height: 25px;
+    width: 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Datatable mouseouver highlight */
+.can-highlight tr.odd:hover, .can-highlight tr.even:hover{
+    cursor: pointer;
+}
+
+
+
+
+/* Static table */
+table {
+    margin-bottom: 0 !important;
+}
+table td {
+    vertical-align: middle !important;
+}
+table .table-header {
+    width: 50%;
+    min-width: 150px;
+}
+table .table-last-colum {
+    text-align: center !important;
+}
+
+/* Allow table to have x scroll */
+.table-scroll-x {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+    border-right: inherit;
+    border-left: inherit;
+    border-bottom: inherit;
+}
+
+/* Table width equals to its content */
+.table-content-size {
+    width: intrinsic;
+    width: -moz-max-content;
+    width: -webkit-max-content;
+    max-width: 100%;
+}
+
+
+
+
+/* Main content padding fix */
+.box-body {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    padding: 15px;
+}
+
+/* Main box shadow*/
+.box-primary {
+    border-radius: 5px;
+    border-top: none;
+}
+
+/* Show pages margin fix */
+.form-group p {
+    margin-bottom: 0;
+    text-align: justify;
+}
+
+/* Form section header */
+.section-header {
+    margin-bottom: 10px;
+}
+.section-header hr {
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.section-header h4 {
+    font-weight: 900;
+    margin: 0 0 10px 0;
+}
+.section-header p {
+    margin: 0;
+}
+.section-group {
+    padding: 0;
+    margin-bottom: 0;
+    padding-bottom: 10px;
+}
+
+/* Dynamic button padding fix */
+.dynamic-button {
+    padding-top:24px !important;
+    margin-bottom:0 !important;
+}
+@media (max-width: 1199px) {
+    .dynamic-button {
+        padding-top:0 !important;
+        margin-bottom:50px !important;
+    }
+}
+
+
+
+
+/* Modal content */
+.modal {
+    padding: 0 !important;
+    overflow: auto !important;
+}
+.modal-xl {
+    width: 80% !important;
+}
+@media (max-width: 767px) {
+    .modal-xl {
+        width: inherit !important;
+    }
+}
+.modal-content {
+    border-radius: 10px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+/* Modal close icon */
+.modal-close {
+    float: right;
+    font-size: 16px;
+    line-height: 24px;
+    opacity: 0.25;
+    filter: alpha(opacity=25);
+}
+.modal-close:hover {
+    cursor: pointer;
+    opacity: 0.5;
+    filter:alpha(opacity=50);
+}
+
+/* Modal header */
+.modal-header {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    padding: 10px 15px;
+    border-bottom: none;
+}
+
+/* Modal title */
+.modal-title {
+    float: left;
+    text-transform: uppercase;
+    font-weight: 900;
+    letter-spacing: 2px;
+
+}
+
+/* Modal body */
+.modal-body p {
+    text-align: justify;
+    line-height: 160%;
+}
+
+/* Modal footer */
+.modal-footer .btn + .btn {
+    margin-left: 0;
+}
+
+
+
+
+/* Remove bullet from ajax notification */
+.alert-ajax {
+    list-style-type: none;
+    display: none;
+}
+.modal-alert-ajax {
+    list-style-type: none;
+    display: none;
+    margin-bottom: 15px;
+}
+
+/* Info flash */
+.alert-info {
+    list-style-type: none;
+    align-items: center;
+    display: flex;
+    text-align: justify;
+}
+.alert-info-icon {
+    font-size: 28px;
+    margin-right: 15px;
+}
+
+/* Danger flash */
+.alert-danger a {
+    font-weight: bold;
+    text-decoration: none;
+}
+
+
+
+/* Homepage dashboard */
+.dashboard-box-header {
+    padding: 10px;
+    padding-top: 13px !important;
+    padding-bottom: 8px;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    border-bottom: none !important;
+}
+.dashboard-box-title {
+    font-weight: 700;
+}
+
+/* Picture preview */
+.img-thumbnail {
+    display: block;
+    max-width: 50vh;
+    max-height: 30vh;
+    padding: 5px;
+}
+.restrict-link {
+    width: 10%;
+    margin-bottom: 12px;
+}
+
+/* Color preview */
+.color-preview {
+    width: 150px;
+    height: 20px;
+    border-style: solid;
+    border-width: 1px;
+}
+
+/* Profile image */
+.profile-image {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-height: 250px;
+    border-radius: 10px;
+}
+
+/* Profile name */
+.profile-name {
+    text-align: center;
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: -10px;
+}
+
+/* Profile e-mail */
+.profile-email {
+    text-align: center;
+    font-size: 18px;
+    margin-top: -30px;
+}
+
+/* Import file log box */
+.log-box {
+    max-height: 600px;
+    border-radius: 3px;
+    padding: 15px;
+    padding-bottom: 0;
+    overflow-y: scroll;
+}
+.log-box-header {
+    font-weight: 900;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+.log-box hr {
+    margin: 0;
+}
+.log-box .form-group {
+    margin-bottom: 10px;
+}
+.import-file-form{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+.log-box .form-group {
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
+/* Highcharts */
+.highcharts-label text {
+    text-decoration: none !important;
+}
+
+
+
+
+/* Flex */
+.row-align-center-vertical-center {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.column-align-center-vertical-center {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.row-align-between-vertical-center {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.side-by-side {
+    display: flex;
+}
+.side-by-side a {
+    margin-left: 10px;
+}
+
+
+

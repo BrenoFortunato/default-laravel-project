@@ -1,0 +1,7 @@
+@isset($$MODEL_NAME_CAMEL$->$FIELD_NAME$)
+    {{-- $FIELD_NAME_TITLE$ Field --}}
+    <div class="form-group col-md-12">
+        {{ Form::label("$FIELD_NAME$", \Lang::get("attributes.$FIELD_NAME$").":") }}
+        <p>{{ $$MODEL_NAME_CAMEL$->$FIELD_NAME$ }}</p>
+    </div>
+@endisset

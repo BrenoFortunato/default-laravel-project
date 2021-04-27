@@ -1,0 +1,87 @@
+<?php
+
+namespace $NAMESPACE_MODEL$;
+
+use App\Services\Functions;
+use $NAMESPACE_MODEL_EXTEND$ as Model;
+$HAS_FACTORY_IMPORT$
+
+$DOCS$
+class $MODEL_NAME$ extends Model
+{
+$HAS_FACTORY$
+
+    /**
+     * The table associated with the model
+     *
+     * @var string
+     */
+    public $table = '$TABLE_NAME$';
+
+    /**
+     * The attributes that are mass assignable
+     *
+     * @var array
+     */
+    public $fillable = [
+        $FIELDS$,
+    ];
+
+    /**
+     * The attributes that should be casted to native types
+     *
+     * @var array
+     */
+    protected $casts = [
+        $CAST$,
+    ];
+
+    /**
+     * Validation rules
+     *
+     * @var array
+     */
+    public static $rules = [
+        $RULES$,
+    ];
+
+    /**
+     * The accessors to append to the model's array form
+     *
+     * @var array
+     */
+    protected $appends = [
+        'readable_created_at',
+        'readable_updated_at',
+    ];
+
+    // =========================================================================
+    // Relationships
+    // =========================================================================
+    
+    $RELATIONS$
+
+    // =========================================================================
+    // Getters
+    // =========================================================================
+
+    /**
+     * Get readable_created_at
+     *
+     * @return string
+     */
+    public function getReadableCreatedAtAttribute()
+    {
+        return Functions::formatDatetime($this->created_at);
+    }
+
+    /**
+     * Get readable_updated_at
+     *
+     * @return string
+     */
+    public function getReadableUpdatedAtAttribute()
+    {
+        return Functions::formatDatetime($this->updated_at);
+    }
+}

@@ -1,0 +1,24 @@
+{{-- $FIELD_NAME_TITLE$ Field --}}
+<div class="form-group col-md-12">
+    {{ Form::label("$FIELD_NAME$", \Lang::get("attributes.$FIELD_NAME$").":") }}
+    @if(isset($$MODEL_NAME_CAMEL$) && $$MODEL_NAME_CAMEL$->getMedia("$FIELD_NAME$")->isNotEmpty())
+        {{-- Preview img --}}
+        <div class="restrict-link">
+            <a href="{{ $$MODEL_NAME_CAMEL$->$FIELD_NAME$ }}" target="_blank">
+                <img class="img-thumbnail" src="{{ $$MODEL_NAME_CAMEL$->$FIELD_NAME$ }}"/>
+            </a>
+        </div>
+        {{-- Delete img --}}
+        <div class="icheck-material-primary">
+            {{ Form::checkbox("$FIELD_NAME$", "delete", false, ["id" => "$FIELD_NAME$"]) }}
+            {{ Form::label("$FIELD_NAME$", \Lang::get("attributes.delete_img")) }}
+        </div>
+    @else
+        {{-- Preview img --}}
+        <img src=""/>
+    @endif
+    <div class="custom-file">
+        {{ Form::file("$FIELD_NAME$", ["class" => "form-control custom-file-input"]) }}
+        {{ Form::label("$FIELD_NAME$", \Lang::get("text.choose_one"), ["class" => "custom-file-label"]) }}
+    </div>
+</div>

@@ -1,0 +1,10 @@
+// $MODEL_NAME$ TODO: fix prefix
+Route::group(["prefix" => "$MODEL_NAME_PLURAL_SNAKE$"], function () {
+    Route::get("/",                                            ["as"=>"$MODEL_NAME_PLURAL_CAMEL$.index",   "uses"=>"$MODEL_NAME$Controller@index"]);
+    Route::get("/create",                                      ["as"=>"$MODEL_NAME_PLURAL_CAMEL$.create",  "uses"=>"$MODEL_NAME$Controller@create"]);
+    Route::post("/",                                           ["as"=>"$MODEL_NAME_PLURAL_CAMEL$.store",   "uses"=>"$MODEL_NAME$Controller@store"]);
+    Route::get("/{$MODEL_NAME_SNAKE$_id}",                     ["as"=>"$MODEL_NAME_PLURAL_CAMEL$.show",    "uses"=>"$MODEL_NAME$Controller@show"]);
+    Route::match(["put", "patch"], "/{$MODEL_NAME_SNAKE$_id}", ["as"=>"$MODEL_NAME_PLURAL_CAMEL$.update",  "uses"=>"$MODEL_NAME$Controller@update"]);
+    Route::delete("/{$MODEL_NAME_SNAKE$_id}",                  ["as"=>"$MODEL_NAME_PLURAL_CAMEL$.destroy", "uses"=>"$MODEL_NAME$Controller@destroy"]);
+    Route::get("/{$MODEL_NAME_SNAKE$_id}/edit",                ["as"=>"$MODEL_NAME_PLURAL_CAMEL$.edit",    "uses"=>"$MODEL_NAME$Controller@edit"]);
+});

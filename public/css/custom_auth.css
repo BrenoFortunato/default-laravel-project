@@ -1,0 +1,199 @@
+/*
+ * =========================================================================================== 
+ * STYLE
+ * =========================================================================================== 
+*/
+
+/* iCheck */
+[class*="icheck-"] {
+    margin: 0 !important;
+}
+[class*="icheck-"] input:first-child:active {
+    opacity: 0 !important;
+}
+[class*="icheck-"] label {
+    font-weight: normal !important;
+}
+.icheck-material-primary > input:first-child:not(:checked):not(:disabled):hover + label::before,
+.icheck-material-primary > input:first-child:not(:checked):not(:disabled):hover + input[type="hidden"] + label::before {
+    border-width: 1px;
+}
+
+/* Font size */
+body {
+    font-size: 14px !important;
+}
+input {
+    font-size: 14px !important;
+}
+
+/* Backgound */
+.login-page {
+    margin-top:-20px;
+    background-color: #e1e1ea;
+    padding-left:5px;
+    padding-top:10px;
+    /* background-image: url("/images/bg.jpg"); */
+    background-repeat: repeat;
+    background-attachment: fixed;
+    background-position: center center;
+    -webkit-background-size: auto;
+    -moz-background-size: auto;
+    -o-background-size: auto;
+    background-size: auto;
+}
+
+/* Login logo */
+.logo-img {
+    width:200px;
+}
+.login-logo {
+    margin-bottom:40px;
+}
+
+/* Login box */
+.login-card-body {
+    border-radius: 5px !important;
+    box-shadow: 0 0 1px #00000020,0 1px 3px #0003;
+}
+
+/* Primary button */
+.btn-primary {
+    font-size: 14px !important;
+    font-weight: 900;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+/* Form input icon */
+.input-group > .input-group-append:not(:last-child) > .input-group-text {
+    border-top-right-radius: 5px !important;
+    border-bottom-right-radius: 5px !important;
+}
+
+/* Fix textarea */
+textarea {
+    resize: none;
+}
+
+/* Fix hr margin */
+hr {
+    margin: 20px 0;
+}
+
+/* Alert */
+.alert {
+    margin-top: -6px;
+    margin-bottom: 20px;
+}
+
+
+
+/*
+ * =========================================================================================== 
+ * COLOR STYLE
+ * =========================================================================================== 
+*/
+
+/* Primary button */
+.btn-primary {
+    background-color: #2ead74 !important;
+    border-color:  #258d5e !important;
+    color: #FFF !important;
+}
+.btn-primary:hover {
+    background-color: #258d5e !important;
+    border-color: #1c6946 !important;
+    color: #FFF !important;
+}
+.btn-primary:active {
+    background-color: #258d5e !important;
+    border-color:  #1c6946 !important;
+    color: #FFF !important;
+}
+.btn-primary:focus {
+    background-color: #258d5e !important;
+    border-color:  #1c6946 !important;
+    color: #FFF !important;
+}
+
+/* iCheck */
+[class*="icheck-material"] > input:first-child + label::before,
+[class*="icheck-material"] > input:first-child + input[type="hidden"] + label::before {
+    border: 1px solid #ced4da;
+}
+.icheck-material-primary > input:first-child {
+    background-color: #2ead74; 
+}
+.icheck-material-primary > input:first-child::-ms-check {
+    background-color: #2ead74;
+}
+.icheck-material-primary > input:first-child:not(:checked):not(:disabled):hover + label::before,
+.icheck-material-primary > input:first-child:not(:checked):not(:disabled):hover + input[type="hidden"] + label::before {
+    border-color: #2ead74; 
+}
+.icheck-material-primary > input:first-child:checked + label::before,
+.icheck-material-primary > input:first-child:checked + input[type="hidden"] + label::before {
+    background-color: #2ead74;
+    border-color: #2ead74; 
+}
+.icheck-material-primary > input[type="radio"]:first-child:checked + label::after,
+.icheck-material-primary > input[type="radio"]:first-child:checked + input[type="hidden"] + label::after {
+    background-color: #2ead74; 
+}
+.icheck-material-primary > input:first-child:checked + label::after,
+.icheck-material-primary > input:first-child:checked + input[type="hidden"] + label::after {
+    border-bottom-color: #fff;
+    border-right-color: #fff; 
+}
+
+/* Links */
+a {
+    color: #2ead74;
+}
+a:hover {
+    color: #258d5e;
+}
+a:focus {
+    color: #258d5e;
+}
+
+/* Form highlight color */
+.form-control:focus {
+    border-color: #2ead74;
+    box-shadow: none;
+}
+.form-control:not(.is-invalid):focus~.input-group-append .input-group-text {
+    border-color: #2ead74 !important
+}
+
+/* Form input icon */
+.input-group-text {
+    background-color: #e9ecef !important;
+    border-left: 2px solid #ced4da !important;
+}
+.input-group > .input-group-append:not(:last-child) > .input-group-text {
+    border-color: #DC3545 !important;
+}
+
+/* Change alert colors */
+.alert.alert-success {
+    background-color: #dff0d8 !important;
+    border-color: #d0e9c6 !important;
+    color: #3c763d !important;
+}
+.alert.alert-info {
+    color: #31708f !important;
+    background-color: #d9edf7 !important;
+    border-color: #bce8f1 !important;
+}
+.alert.alert-warning {
+    color: #8a6d3b !important;
+    background-color: #fcf8e3 !important;
+    border-color: #faebcc !important;
+}
+.alert.alert-danger {
+    color: #a94442 !important;
+    background-color: #f2dede !important;
+    border-color: #ebccd1 !important;
+}

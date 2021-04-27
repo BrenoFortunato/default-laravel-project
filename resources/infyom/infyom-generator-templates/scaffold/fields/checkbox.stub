@@ -1,0 +1,1 @@
+{{ Form::checkbox("$FIELD_NAME$", $CHECKBOX_VALUE$, null, ["id" => "$FIELD_NAME$"]) }}

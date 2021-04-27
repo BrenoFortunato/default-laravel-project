@@ -1,0 +1,5 @@
+{{-- $FIELD_NAME_TITLE$ Field --}}
+<div class="form-group col-md-12">
+    {!! Form::label("$FIELD_NAME$", \Lang::get("attributes.$FIELD_NAME$").":") !!}
+    {!! Form::textarea("$FIELD_NAME$", null, ["class" => "form-control"$SIZE$]) !!}
+</div>
