@@ -9,7 +9,7 @@ rm -rf .git
 
 Em seguida, altere o texto "changeme" dos arquivos **.env.example** e **docker-compose.yml**.
 
-Adicione o endereço criado em APP_URL em **/etc/hosts**:
+Adicione o endereço de APP_URL em **/etc/hosts**, da seguinte forma:
 ```php
 127.0.0.1           dev.changeme.com.br
 ```
