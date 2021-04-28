@@ -202,7 +202,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 .brand-image {
     margin: 0 !important;
     float: none !important;
-    max-height: 30px !important;
+    max-height: 35px !important;
 }
 
 /* Sidebar items */
@@ -261,7 +261,6 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 
 /* Footer */
 .main-footer {
-    color: #00000080;
     text-align: center;
     font-weight: bold;
 }
