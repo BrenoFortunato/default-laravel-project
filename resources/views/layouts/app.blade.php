@@ -34,15 +34,15 @@
 <body class="hold-transition sidebar-mini layout-fixed">
     <div class="wrapper">
         {{-- Main Header --}}
-        @include('layouts.navbar')
+        @include("layouts.navbar")
 
         {{-- Sidebar --}}
-        @include('layouts.sidebar')
+        @include("layouts.sidebar")
 
         {{-- Content --}}
         <div class="content-wrapper">
             <section class="content">
-                @yield('content')
+                @yield("content")
             </section>
         </div>
 

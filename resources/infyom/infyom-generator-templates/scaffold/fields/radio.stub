@@ -1,4 +1,4 @@
 <div class="icheck-material-primary">
     {{ Form::radio("$FIELD_NAME$", $VALUE$, false, ["id" => "$FIELD_NAME$_$VALUE$"]) }}
-    {{ Form::label("$FIELD_NAME$_$VALUE$", \Lang::get("text.$LABEL$")) }}
+    {{ Form::label("$FIELD_NAME$_$VALUE$", Lang::get("text.$LABEL$")) }}
 </div>

@@ -23,7 +23,6 @@ return [
     'yes'                   => 'Sim',
     'no'                    => 'Não',
     'member_since'          => 'Membro desde',
-    'confirmation'          => 'Você tem certeza?',
     'map_info'              => 'Arraste o <b>marcador</b> para atualizar os campos de endereço.',
 
     // Menu

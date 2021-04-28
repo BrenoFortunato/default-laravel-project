@@ -7,8 +7,8 @@
 
         <div class="box box-primary">
             <section class="content-header">
-                <h1 class="title-header">{{ mb_strtoupper(\Lang::choice("tables.$MODEL_NAME_PLURAL_SNAKE$", "p"), "UTF-8") }}</h1>
-                <a class="table-header-button" href="{{ route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.create') }}"><i class="fas fa-plus table-header-icon"></i><span class="table-header-text">{{ mb_strtoupper(\Lang::get("text.add"), "UTF-8") }}<span></a>
+                <h1 class="title-header">{{ mb_strtoupper(Lang::choice("tables.$MODEL_NAME_PLURAL_SNAKE$", "p"), "UTF-8") }}</h1>
+                <a class="table-header-button" href="{{ route('$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.create') }}"><i class="fas fa-plus table-header-icon"></i><span class="table-header-text">{{ mb_strtoupper(Lang::get("text.add"), "UTF-8") }}<span></a>
             </section>
 
             <div class="box-body">

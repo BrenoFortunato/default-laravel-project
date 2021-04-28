@@ -2,6 +2,8 @@
 
 namespace $NAMESPACE_DATATABLES$;
 
+use DB;
+use Lang;
 use $NAMESPACE_MODEL$\$MODEL_NAME$;
 use App\Services\DataTablesDefaults;
 use Yajra\DataTables\Datatables;
@@ -10,7 +12,7 @@ use Yajra\DataTables\Services\DataTable;
 class $MODEL_NAME$DataTable extends DataTable
 {
     /**
-     * Build DataTable class
+     * Build DataTable class.
      *
      * @return \Yajra\DataTables\Datatables
      */
@@ -26,7 +28,7 @@ class $MODEL_NAME$DataTable extends DataTable
     }
 
     /**
-     * Optional method if you want to use html builder
+     * Optional method if you want to use html builder.
      *
      * @return \Yajra\DataTables\Html\Builder
      */
@@ -35,12 +37,12 @@ class $MODEL_NAME$DataTable extends DataTable
         return $this->builder()
             ->minifiedAjax()
             ->columns($this->getColumns())
-            ->addAction(["width" => "75px", "printable" => false, "title" => \Lang::get("datatables.action")])
+            ->addAction(["width" => "75px", "printable" => false, "title" => Lang::get("datatables.action")])
             ->parameters(DataTablesDefaults::getParameters());
     }
 
     /**
-     * Get columns
+     * Get columns.
      *
      * @return array
      */
@@ -52,12 +54,12 @@ class $MODEL_NAME$DataTable extends DataTable
     }
 
     /**
-     * Get filename for export
+     * Get filename for export.
      *
      * @return string
      */
     protected function filename()
     {
-        return \Lang::choice("tables.$MODEL_NAME_PLURAL_SNAKE$", "p")." ".date('d.m.Y H\hi\m');
+        return Lang::choice("tables.$MODEL_NAME_PLURAL_SNAKE$", "p")." ".date("d.m.Y H\hi\m");
     }
 }

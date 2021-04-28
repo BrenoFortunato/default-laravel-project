@@ -87,6 +87,36 @@ $(window).on("load", function(){
     }, 100);
 });
 
+// Confirm message
+function confirmMessage(e) {
+    e.preventDefault();
+    let target = e.target;
+    if ($(target).is("i")) {
+        target = $(target).closest("button")[0];
+    }
+    Swal.fire({
+        icon: "question",
+        title: "Você tem certeza?",
+        text: "Não será possível recuperar o registro deletado.",
+        confirmButtonText: "Confirmar",
+        cancelButtonText: "Cancelar",
+        showCloseButton: true,
+        showConfirmButton: true,
+        showCancelButton: true,
+        focusConfirm: false,
+        buttonsStyling: false,
+        customClass: {
+            confirmButton: 'btn btn-danger',
+            cancelButton: 'btn btn-default',
+        }
+    }).then((result) => {
+        if (result.value) {
+            showLoading();
+            $(target).removeAttr("onclick").trigger("click");
+        }
+    });
+}
+
 // Convert \n to <br>
 function nl2br(str) {
     var breakTag = "<br>";

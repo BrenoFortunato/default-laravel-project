@@ -12,14 +12,14 @@ class $MODEL_NAME$ extends Model
 $HAS_FACTORY$
 
     /**
-     * The table associated with the model
+     * The table associated with the model.
      *
      * @var string
      */
     public $table = '$TABLE_NAME$';
 
     /**
-     * The attributes that are mass assignable
+     * The attributes that are mass assignable.
      *
      * @var array
      */
@@ -28,7 +28,7 @@ $HAS_FACTORY$
     ];
 
     /**
-     * The attributes that should be casted to native types
+     * The attributes that should be casted to native types.
      *
      * @var array
      */
@@ -37,7 +37,7 @@ $HAS_FACTORY$
     ];
 
     /**
-     * Validation rules
+     * Validation rules.
      *
      * @var array
      */
@@ -46,7 +46,7 @@ $HAS_FACTORY$
     ];
 
     /**
-     * The accessors to append to the model's array form
+     * The accessors to append to the model's array form.
      *
      * @var array
      */
@@ -66,7 +66,7 @@ $HAS_FACTORY$
     // =========================================================================
 
     /**
-     * Get readable_created_at
+     * Get readable_created_at.
      *
      * @return string
      */
@@ -76,7 +76,7 @@ $HAS_FACTORY$
     }
 
     /**
-     * Get readable_updated_at
+     * Get readable_updated_at.
      *
      * @return string
      */

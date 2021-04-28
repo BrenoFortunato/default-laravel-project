@@ -9,6 +9,8 @@ $DOCS$
 class $MODEL_NAME$Repository extends BaseRepository
 {
     /**
+     * The fields that can be searched.
+     *
      * @var array
      */
     protected $fieldSearchable = [
@@ -16,7 +18,7 @@ class $MODEL_NAME$Repository extends BaseRepository
     ];
 
     /**
-     * Return searchable fields
+     * Return searchable fields.
      *
      * @return array
      */
@@ -26,7 +28,7 @@ class $MODEL_NAME$Repository extends BaseRepository
     }
 
     /**
-     * Configure the Model
+     * Configure the Model.
      **/
     public function model()
     {

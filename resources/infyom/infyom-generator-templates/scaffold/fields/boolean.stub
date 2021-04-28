@@ -1,7 +1,7 @@
 {{-- $FIELD_NAME_TITLE$ Field --}}
 <div class="form-group col-md-12">
-    {!! Form::label("$FIELD_NAME$", \Lang::get("attributes.$FIELD_NAME$").":") !!}
+    {{ Form::label("$FIELD_NAME$", Lang::get("attributes.$FIELD_NAME$").":") }}
     <label class="checkbox-inline">
-        {!! Form::checkbox("$FIELD_NAME$", 1, true) !!}
+        {{ Form::checkbox("$FIELD_NAME$", 1, true) }}
     </label>
 </div>

@@ -8,11 +8,13 @@ use App\Repositories\BaseRepository;
 /**
  * Class UserRepository
  * @package App\Repositories
- * @version April 26, 2021, 12:38 pm -03
+ * @version April 26, 2021, 12:28 pm -03
 */
 class UserRepository extends BaseRepository
 {
     /**
+     * The fields that can be searched.
+     *
      * @var array
      */
     protected $fieldSearchable = [
@@ -24,7 +26,7 @@ class UserRepository extends BaseRepository
     ];
 
     /**
-     * Return searchable fields
+     * Return searchable fields.
      *
      * @return array
      */
@@ -34,7 +36,7 @@ class UserRepository extends BaseRepository
     }
 
     /**
-     * Configure the Model
+     * Configure the Model.
      **/
     public function model()
     {

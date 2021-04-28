@@ -7,7 +7,7 @@ use Illuminate\Support\Facades\Schema;
 class Create$TABLE_NAME_TITLE$Table extends Migration
 {
     /**
-     * Run the migrations
+     * Run the migrations.
      *
      * @return void
      */
@@ -19,7 +19,7 @@ class Create$TABLE_NAME_TITLE$Table extends Migration
     }
 
     /**
-     * Reverse the migrations
+     * Reverse the migrations.
      *
      * @return void
      */

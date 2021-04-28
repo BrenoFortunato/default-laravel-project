@@ -1,1 +1,1 @@
-"$FIELD_NAME$" => ["name" => "$FIELD_NAME$", "render" => "(data!=null)? ((data.length>180)? data.substr(0,180)+'...' : data) : '-'", "title" => \Lang::get("attributes.$FIELD_NAME$")]
+"$FIELD_NAME$" => ["name" => "$FIELD_NAME$", "render" => "(data!=null)? ((data.length>180)? data.substr(0,180)+'...' : data) : '-'", "title" => Lang::get("attributes.$FIELD_NAME$")]

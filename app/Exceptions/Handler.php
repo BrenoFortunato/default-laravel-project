@@ -52,12 +52,12 @@ class Handler extends ExceptionHandler
         if ($this->isHttpException($exception)) {
             switch ($exception->getStatusCode()) {
                 case 404:
-                    Flash::error(\Lang::get('flash.404'));
+                    Flash::error(Lang::get('flash.404'));
                     return app('App\Http\Controllers\HomeController')->index();
                     break;
 
                 case 403:
-                    Flash::error(\Lang::get('flash.403'));
+                    Flash::error(Lang::get('flash.403'));
                     return app('App\Http\Controllers\HomeController')->index();
                     break;
 

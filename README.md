@@ -6,7 +6,13 @@ Após clonar este repositório, renomeie a pasta criada para o nome do projeto e
 ```php
 rm -rf .git
 ```
+
 Em seguida, altere o texto "changeme" dos arquivos **.env.example** e **docker-compose.yml**.
+
+Adicione o endereço criado em APP_URL em **/etc/hosts**:
+```php
+127.0.0.1           dev.changeme.com.br
+```
 
 Para **iniciar o Docker**, abra um terminal na pasta do projeto e execute o comando abaixo. Deixe este terminal executando enquanto estiver utilizando o projeto:
 ```php

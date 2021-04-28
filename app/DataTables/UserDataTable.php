@@ -3,6 +3,7 @@
 namespace App\DataTables;
 
 use DB;
+use Lang;
 use App\Models\User;
 use App\Services\DataTablesDefaults;
 use Yajra\DataTables\Datatables;
@@ -11,7 +12,7 @@ use Yajra\DataTables\Services\DataTable;
 class UserDataTable extends DataTable
 {
     /**
-     * Build DataTable class
+     * Build DataTable class.
      *
      * @return \Yajra\DataTables\Datatables
      */
@@ -53,7 +54,7 @@ class UserDataTable extends DataTable
     }
 
     /**
-     * Optional method if you want to use html builder
+     * Optional method if you want to use html builder.
      *
      * @return \Yajra\DataTables\Html\Builder
      */
@@ -62,32 +63,32 @@ class UserDataTable extends DataTable
         return $this->builder()
             ->minifiedAjax()
             ->columns($this->getColumns())
-            ->addAction(["width" => "75px", "printable" => false, "title" => \Lang::get("datatables.action")])
+            ->addAction(["width" => "75px", "printable" => false, "title" => Lang::get("datatables.action")])
             ->parameters(DataTablesDefaults::getParameters());
     }
 
     /**
-     * Get columns
+     * Get columns.
      *
      * @return array
      */
     protected function getColumns()
     {
         return [
-            "name"               => ["name" => "name",               "render" => "(data!=null)? ((data.length>180)? data.substr(0,180)+'...' : data) : '-'", "title" => \Lang::get("attributes.name")],
-            "email"              => ["name" => "email",              "render" => "(data!=null)? ((data.length>180)? data.substr(0,180)+'...' : data) : '-'", "title" => \Lang::get("attributes.email")],
-            "readable_role_name" => ["name" => "readable_role_name", "render" => "(data!=null)? ((data.length>180)? data.substr(0,180)+'...' : data) : '-'", "title" => \Lang::get("attributes.role_name")],
-            "readable_is_active" => ["name" => "readable_is_active", "render" => "(data!=null)? ((data.length>180)? data.substr(0,180)+'...' : data) : '-'", "title" => \Lang::get("attributes.is_active")],
+            "name"               => ["name" => "name",               "render" => "(data!=null)? ((data.length>180)? data.substr(0,180)+'...' : data) : '-'", "title" => Lang::get("attributes.name")],
+            "email"              => ["name" => "email",              "render" => "(data!=null)? ((data.length>180)? data.substr(0,180)+'...' : data) : '-'", "title" => Lang::get("attributes.email")],
+            "readable_role_name" => ["name" => "readable_role_name", "render" => "(data!=null)? ((data.length>180)? data.substr(0,180)+'...' : data) : '-'", "title" => Lang::get("attributes.role_name")],
+            "readable_is_active" => ["name" => "readable_is_active", "render" => "(data!=null)? ((data.length>180)? data.substr(0,180)+'...' : data) : '-'", "title" => Lang::get("attributes.is_active")],
         ];
     }
 
     /**
-     * Get filename for export
+     * Get filename for export.
      *
      * @return string
      */
     protected function filename()
     {
-        return \Lang::choice("tables.users", "p")." ".date('d.m.Y H\hi\m');
+        return Lang::choice("tables.users", "p")." ".date("d.m.Y H\hi\m");
     }
 }

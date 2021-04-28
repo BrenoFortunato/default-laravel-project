@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Auth;
+use Lang;
 use Flash;
 use Response;
 use App\DataTables\UserDataTable;
@@ -17,7 +18,7 @@ class UserController extends AppBaseController
     private $userRepository;
 
     /**
-     * Create a new controller instance
+     * Create a new controller instance.
      * 
      * @param UserRepository $userRepo
      *
@@ -29,7 +30,7 @@ class UserController extends AppBaseController
     }
 
     /**
-     * Display a listing of the User
+     * Display a listing of the User.
      *
      * @param UserDataTable $userDataTable
 
@@ -41,7 +42,7 @@ class UserController extends AppBaseController
     }
 
     /**
-     * Show the form for creating a new User
+     * Show the form for creating a new User.
      *
      * @return Response
      */
@@ -53,7 +54,7 @@ class UserController extends AppBaseController
     }
 
     /**
-     * Store a newly created User in storage
+     * Store a newly created User in storage.
      *
      * @param CreateUserRequest $request
      *
@@ -65,12 +66,12 @@ class UserController extends AppBaseController
         $user = $this->userRepository->create($input);
         $user->assignRole($input["role_name"]);
 
-        Flash::success(\Lang::choice("tables.users", "s")." ".\Lang::choice("flash.saved", "m"));
+        Flash::success(Lang::choice("tables.users", "s")." ".Lang::choice("flash.saved", "m"));
         return redirect(route("users.index"));
     }
 
     /**
-     * Display the specified User
+     * Display the specified User.
      *
      * @return Response
      */
@@ -78,7 +79,7 @@ class UserController extends AppBaseController
     {
         $user = $this->userRepository->find(request()->user_id);
         if (empty($user)) {
-            Flash::error(\Lang::choice("tables.users", "s")." ".\Lang::choice("flash.not_found", "m"));
+            Flash::error(Lang::choice("tables.users", "s")." ".Lang::choice("flash.not_found", "m"));
             return redirect(route("users.index"));
         }
 
@@ -86,7 +87,7 @@ class UserController extends AppBaseController
     }
 
     /**
-     * Show the form for editing the specified User
+     * Show the form for editing the specified User.
      *
      * @return Response
      */
@@ -94,7 +95,7 @@ class UserController extends AppBaseController
     {
         $user = $this->userRepository->find(request()->user_id);
         if (empty($user)) {
-            Flash::error(\Lang::choice("tables.users", "s")." ".\Lang::choice("flash.not_found", "m"));
+            Flash::error(Lang::choice("tables.users", "s")." ".Lang::choice("flash.not_found", "m"));
             return redirect(route("users.index"));
         }
 
@@ -104,7 +105,7 @@ class UserController extends AppBaseController
     }
 
     /**
-     * Update the specified User in storage
+     * Update the specified User in storage.
      *
      * @param UpdateUserRequest $request
      *
@@ -114,7 +115,7 @@ class UserController extends AppBaseController
     {
         $user = $this->userRepository->find(request()->user_id);
         if (empty($user)) {
-            Flash::error(\Lang::choice("tables.users", "s")." ".\Lang::choice("flash.not_found", "m"));
+            Flash::error(Lang::choice("tables.users", "s")." ".Lang::choice("flash.not_found", "m"));
             return redirect(route("users.index"));
         }
 
@@ -122,12 +123,12 @@ class UserController extends AppBaseController
         $user = $this->userRepository->update($input, $user->id);
         $user->syncRoles($input['role_name']);
 
-        Flash::success(\Lang::choice("tables.users", "s")." ".\Lang::choice("flash.updated", "m"));
+        Flash::success(Lang::choice("tables.users", "s")." ".Lang::choice("flash.updated", "m"));
         return redirect(route("users.index"));
     }
 
     /**
-     * Remove the specified User from storage
+     * Remove the specified User from storage.
      *
      * @return Response
      */
@@ -135,23 +136,23 @@ class UserController extends AppBaseController
     {
         $user = $this->userRepository->find(request()->user_id);
         if (empty($user)) {
-            Flash::error(\Lang::choice("tables.users", "s")." ".\Lang::choice("flash.not_found", "m"));
+            Flash::error(Lang::choice("tables.users", "s")." ".Lang::choice("flash.not_found", "m"));
             return redirect(route("users.index"));
         }
 
         if ($user->id == Auth::user()->id) {
-            Flash::error(\Lang::get("flash.self_delete"));
+            Flash::error(Lang::get("flash.self_delete"));
             return redirect(route("users.index"));
         }
 
         try { 
             $this->userRepository->delete($user->id);
         } catch(\Exception $e) {
-            Flash::error(\Lang::choice("tables.users", "s")." ".\Lang::choice("flash.not_deleted", "m"));
+            Flash::error(Lang::choice("tables.users", "s")." ".Lang::choice("flash.not_deleted", "m"));
             return redirect(route("users.index"));
         }
 
-        Flash::success(\Lang::choice("tables.users", "s")." ".\Lang::choice("flash.deleted", "m"));
+        Flash::success(Lang::choice("tables.users", "s")." ".Lang::choice("flash.deleted", "m"));
         return redirect(route("users.index"));
     }
 }

@@ -2,6 +2,10 @@
 
 namespace App\Services;
 
+use DB;
+use Lang;
+use Carbon;
+
 class Functions
 {
     // =========================================================================
@@ -9,7 +13,7 @@ class Functions
     // =========================================================================
 
     /**
-     * Search an array of arrays for $searchValue on $searchKey and, if it finds a match, return the value on $returnKey or the whole subarray
+     * Search an array of arrays for $searchValue on $searchKey and, if it finds a match, return the value on $returnKey or the whole subarray.
      */
     public static function multidimensionalArraySearch($multiArray, $searchKey, $searchValue, $returnKey = null)
     {
@@ -27,7 +31,7 @@ class Functions
     }
 
     /**
-     * Search an array of objects for $searchValue on $searchField and, if it finds a match, return the value on $returnField or the whole object
+     * Search an array of objects for $searchValue on $searchField and, if it finds a match, return the value on $returnField or the whole object.
      */
     public static function objectArraySearch($objectArray, $searchField, $searchValue, $returnField = null)
     {
@@ -49,47 +53,47 @@ class Functions
     // =========================================================================
 
     /**
-     * Datetime format
+     * Datetime format.
      *
      * @return string
      */
     public static function formatDatetime($value)
     {
-        return isset($value)? \Carbon::parse($value)->format("d/m/Y H:i") : null;
+        return isset($value)? Carbon::parse($value)->format("d/m/Y H:i") : null;
     }
 
     /**
-     * Date format
+     * Date format.
      *
      * @return string
      */
     public static function formatDate($value)
     {
-        return isset($value)? \Carbon::parse($value)->format("d/m/Y") : null;
+        return isset($value)? Carbon::parse($value)->format("d/m/Y") : null;
     }
 
     /**
-     * Time format
+     * Time format.
      *
      * @return string
      */
     public static function formatTime($value)
     {
-        return isset($value)? \Carbon::parse($value)->format("H:i") : null;
+        return isset($value)? Carbon::parse($value)->format("H:i") : null;
     }
 
     /**
-     * Boolean format
+     * Boolean format.
      *
      * @return string
      */
     public static function formatBoolean($value)
     {
-        return boolval($value)? \Lang::get("text.yes") : \Lang::get("text.no");
+        return boolval($value)? Lang::get("text.yes") : Lang::get("text.no");
     }
 
     /**
-     * Percentage format
+     * Percentage format.
      *
      * @return string
      */
@@ -99,7 +103,7 @@ class Functions
     }
 
     /**
-     * Integer format
+     * Integer format.
      *
      * @return string
      */
@@ -109,7 +113,7 @@ class Functions
     }
 
     /**
-     * Decimal format
+     * Decimal format.
      *
      * @return string
      */
@@ -119,7 +123,7 @@ class Functions
     }
 
     /**
-     * Decimal format only if number has decimal places
+     * Decimal format only if number has decimal places.
      *
      * @return string
      */
@@ -129,7 +133,7 @@ class Functions
     }
 
     /**
-     * Latitude and longitude format
+     * Latitude and longitude format.
      *
      * @return string
      */
@@ -139,7 +143,7 @@ class Functions
     }
 
     /**
-     * BRL currency format
+     * BRL currency format.
      *
      * @return string
      */
@@ -149,7 +153,7 @@ class Functions
     }
 
     /**
-     * Sentence format (only first letter capitalized)
+     * Sentence format (only first letter capitalized).
      *
      * @return string
      */
@@ -159,10 +163,10 @@ class Functions
     }
 
     /**
-     * Title format (all letters capitalized, except $exceptions)
+     * Title format (all letters capitalized, except $exceptions).
      * 
-     * Exceptions all in lower case => words to keep all as lower case
-     * Exceptions all in upper case => words to keep all as upper case
+     * Exceptions all in lower case => words to keep all as lower case.
+     * Exceptions all in upper case => words to keep all as upper case.
      * 
      * @return string
      */
@@ -197,7 +201,7 @@ class Functions
 
 
     /**
-     * Format phone using mask
+     * Format phone using mask.
      * 
      * @return string
      */
@@ -240,7 +244,7 @@ class Functions
     }
 
     /**
-     * Format CNPJ using mask
+     * Format CNPJ using mask.
      * 
      * @return string
      */
@@ -256,7 +260,7 @@ class Functions
     }
 
     /**
-     * Format CPF using mask
+     * Format CPF using mask.
      * 
      * @return string
      */
@@ -272,7 +276,7 @@ class Functions
     }
 
     /**
-     * Format vehicle plate using mask
+     * Format vehicle plate using mask.
      * 
      * @return string
      */
@@ -288,7 +292,7 @@ class Functions
     }
 
     /**
-     * Apply $mask to $val
+     * Apply $mask to $val.
      * 
      * @return string
      */
@@ -313,7 +317,7 @@ class Functions
     // =========================================================================
 
     /**
-     * BRL currency format to double
+     * BRL currency format to double.
      *
      * @return double
      */
@@ -337,11 +341,12 @@ class Functions
     // =========================================================================
 
     /**
-     * Lightens/darkens a given colour (hex format), returning the altered colour in hex format.7
-     * @param str $hexcolor Colour as hexadecimal (with or without hash);
-     *
-     * @percent float $percent Decimal ( 0.2 = lighten by 20%(), -0.4 = darken by 40%() )
-     * @return str Lightened/Darkend colour as hexadecimal (with hash);
+     * Lightens/darkens a given colour (hex format), returning the altered colour in hex format.
+     * 
+     * 0.2  => lighten by 20%.
+     * -0.4 => darken by 40%.
+     * 
+     * @return string
      */
     public static function luminance($hexcolor, $percent)
     {
@@ -361,10 +366,12 @@ class Functions
     }
 
     /**
-     * Add timestamp to data before insering into database
+     * Add timestamp to data before insering into database.
+     * 
+     * @return array
      */
     public static function addTimestamp($data)
     {
-        return array_merge($data, ["created_at" => \DB::raw("CURRENT_TIMESTAMP"), "updated_at" => \DB::raw("CURRENT_TIMESTAMP")]);
+        return array_merge($data, ["created_at" => DB::raw("CURRENT_TIMESTAMP"), "updated_at" => DB::raw("CURRENT_TIMESTAMP")]);
     }
 }

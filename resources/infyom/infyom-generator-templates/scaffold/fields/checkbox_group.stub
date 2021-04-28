@@ -2,6 +2,6 @@
 <div class="form-group col-md-12">
     <div class="icheck-material-primary">
         $CHECKBOXES$
-        {{ Form::label("$FIELD_NAME$", \Lang::get("attributes.$FIELD_NAME$")) }}
+        {{ Form::label("$FIELD_NAME$", Lang::get("attributes.$FIELD_NAME$")) }}
     </div>
 </div>

@@ -1,10 +1,10 @@
 {{-- $FIELD_NAME_TITLE$ Field --}}
 <div class="form-group col-md-6">
-    {!! Form::label("$FIELD_NAME$", \Lang::get("attributes.$FIELD_NAME$").":") !!}
-    {!! Form::text("$FIELD_NAME$", null, ["class" => "form-control", "id"=>"$FIELD_NAME$"]) !!}
+    {{ Form::label("$FIELD_NAME$", Lang::get("attributes.$FIELD_NAME$").":") }}
+    {{ Form::text("$FIELD_NAME$", null, ["class" => "form-control", "id"=>"$FIELD_NAME$"]) }}
 </div>
 
-@push("scripts")
+@push("js")
     <script type="text/javascript">
         $("#$FIELD_NAME$").datetimepicker({
             format: "YYYY-MM-DD HH:mm:ss",

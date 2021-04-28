@@ -24,14 +24,14 @@
                     <img src="{{ Auth::user()->photo }}" class="img-circle" alt=""/>
                     <p>
                         <b>{{ Auth::user()->name }}</b>
-                        <small>{{ \Lang::choice('text.member_since','p') }} {{ Auth::user()->readable_created_at }}</small>
+                        <small>{{ Lang::choice('text.member_since','p') }} {{ Auth::user()->readable_created_at }}</small>
                     </p>
                 </li>
 
                 {{-- Menu Footer --}}
                 <li class="user-footer">
-                    <a href="{{ route('home') }}" class="btn btn-default btn-flat">{{ \Lang::choice('text.home','p') }}</a>
-                    <a href="{{ route('logout') }}" class="btn btn-default btn-flat float-right" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ \Lang::choice('text.logout','p') }}</a>
+                    <a href="{{ route('home') }}" class="btn btn-default btn-flat">{{ Lang::choice('text.home','p') }}</a>
+                    <a href="{{ route('logout') }}" class="btn btn-default btn-flat float-right" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">{{ Lang::choice('text.logout','p') }}</a>
                     <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">@csrf</form>
                 </li>
             </ul>

@@ -207,26 +207,48 @@ ol.breadcrumb {
     color: #FFF !important;
 }
 
+/* Danger button */
+.btn-danger {
+    background-color: #dc3545 !important;
+    border-color:  #c82333 !important;
+    color: #FFF !important;
+}
+.btn-danger:hover {
+    background-color: #c82333 !important;
+    border-color:  #a51d2b !important;
+    color: #FFF !important;
+}
+.btn-danger:active {
+    background-color: #c82333 !important;
+    border-color:  #a51d2b !important;
+    color: #FFF !important;
+}
+.btn-danger:focus {
+    background-color: #c82333 !important;
+    border-color:  #a51d2b !important;
+    color: #FFF !important;
+}
+
 /* Default button */
 .btn-default {
     background-color: #f4f4f4 !important;
     border-color:  #ddd !important;
-    color: #444 !important;
+    color: #495057 !important;
 }
 .btn-default:hover {
     background-color: #e7e7e7 !important;
     border-color:  #adadad !important;
-    color: #333 !important;
+    color: #495057 !important;
 }
 .btn-default:active {
     background-color: #e7e7e7 !important;
     border-color:  #adadad !important;
-    color: #333 !important;
+    color: #495057 !important;
 }
 .btn-default:focus {
     background-color: #e7e7e7 !important;
     border-color:  #adadad !important;
-    color: #333 !important;
+    color: #495057 !important;
 }
 
 
@@ -285,7 +307,7 @@ ol.breadcrumb {
 
 /* Datatable other pages */
 .pagination li:not(.disabled):not(.active) .page-link {
-    color: #333;
+    color: #495057;
 }
 .pagination li:not(.disabled):not(.active) .page-link:hover {
     background-color: #2ead74 !important;
@@ -329,22 +351,22 @@ ol.breadcrumb {
 .dt-buttons .btn-secondary {
     background-color: #f4f4f4 !important;
     border-color:  #ddd !important;
-    color: #444 !important;
+    color: #495057 !important;
 }
 .dt-buttons .btn-secondary:hover {
     background-color: #e7e7e7 !important;
     border-color:  #adadad !important;
-    color: #333 !important;
+    color: #495057 !important;
 }
 .dt-buttons .btn-secondary:active {
     background-color: #e7e7e7 !important;
     border-color:  #adadad !important;
-    color: #333 !important;
+    color: #495057 !important;
 }
 .dt-buttons .btn-secondary:focus {
     background-color: #e7e7e7 !important;
     border-color:  #adadad !important;
-    color: #333 !important;
+    color: #495057 !important;
 }
 
 /* Datatable mouseouver highlight */
@@ -369,7 +391,7 @@ ol.breadcrumb {
 /* Modal header */
 .modal-header{
     background-color: #2ead74;
-    box-shadow: 0 0 2px #333;
+    box-shadow: 0 0 2px #495057;
 }
 
 /* Modal close icon */

@@ -42,7 +42,7 @@ class HomeController extends Controller
 
         //     default:
         //         Auth::logout();
-        //         Flash::error(\Lang::get('flash.invalid_login'));
+        //         Flash::error(Lang::get('flash.invalid_login'));
         //         return redirect(route('login'));
         //     break;
         // }

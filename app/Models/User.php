@@ -25,14 +25,14 @@ class User extends Authenticatable implements HasMedia
     use InteractsWithMedia;
 
     /**
-     * The table associated with the model
+     * The table associated with the model.
      *
      * @var string
      */
     public $table = 'users';
 
     /**
-     * The attributes that should be hidden for arrays
+     * The attributes that should be hidden for arrays.
      *
      * @var array
      */
@@ -42,7 +42,7 @@ class User extends Authenticatable implements HasMedia
     ];
 
     /**
-     * The attributes that are mass assignable
+     * The attributes that are mass assignable.
      *
      * @var array
      */
@@ -56,7 +56,7 @@ class User extends Authenticatable implements HasMedia
     ];
 
     /**
-     * The attributes that should be casted to native types
+     * The attributes that should be casted to native types.
      *
      * @var array
      */
@@ -71,7 +71,7 @@ class User extends Authenticatable implements HasMedia
     ];
 
     /**
-     * Validation rules
+     * Validation rules.
      *
      * @var array
      */
@@ -84,7 +84,7 @@ class User extends Authenticatable implements HasMedia
     ];
 
     /**
-     * The accessors to append to the model's array form
+     * The accessors to append to the model's array form.
      *
      * @var array
      */
@@ -108,7 +108,7 @@ class User extends Authenticatable implements HasMedia
     // =========================================================================
 
     /**
-     * Get user photo or a default photo
+     * Get user photo or a default photo.
      *
      * @return string
      */
@@ -118,7 +118,7 @@ class User extends Authenticatable implements HasMedia
     }
 
     /**
-     * Get readable_created_at
+     * Get readable_created_at.
      *
      * @return string
      */
@@ -128,7 +128,7 @@ class User extends Authenticatable implements HasMedia
     }
 
     /**
-     * Get readable_updated_at
+     * Get readable_updated_at.
      *
      * @return string
      */
@@ -138,7 +138,7 @@ class User extends Authenticatable implements HasMedia
     }
 
     /**
-     * Get readable_email_verified_at
+     * Get readable_email_verified_at.
      *
      * @return string
      */
@@ -148,7 +148,7 @@ class User extends Authenticatable implements HasMedia
     }
 
     /**
-     * Get readable_is_active
+     * Get readable_is_active.
      *
      * @return string
      */
@@ -158,7 +158,7 @@ class User extends Authenticatable implements HasMedia
     }
 
     /**
-     * Get role_name
+     * Get role_name.
      *
      * @return string
      */
@@ -168,7 +168,7 @@ class User extends Authenticatable implements HasMedia
     }
 
     /**
-     * Get readable_role_name
+     * Get readable_role_name.
      *
      * @return string
      */
@@ -182,7 +182,7 @@ class User extends Authenticatable implements HasMedia
     // =========================================================================
 
     /**
-     * Set password
+     * Set password.
      *
      * @param string $value
      *
@@ -198,7 +198,7 @@ class User extends Authenticatable implements HasMedia
     // =========================================================================
 
     /**
-     * Check whether user photo is default or not
+     * Check whether user photo is default or not.
      *
      * @return boolean
      */
@@ -208,7 +208,7 @@ class User extends Authenticatable implements HasMedia
     }
 
     /**
-     * Send the password reset notification
+     * Send the password reset notification.
      *
      * @param  string  $token
      *
@@ -220,7 +220,9 @@ class User extends Authenticatable implements HasMedia
     }
 
     /**
-     * File upload
+     * File upload.
+     * 
+     * @return void
      */
     public function registerMediaCollections(): void
     {

@@ -9,7 +9,7 @@ use Flash;
 class ActiveMiddleware
 {
     /**
-     * Handle an incoming request
+     * Handle an incoming request.
      *
      * @param  \Illuminate\Http\Request  $request
      * @param  \Closure  $next
@@ -22,7 +22,7 @@ class ActiveMiddleware
             return $next($request);
         } else {
             Auth::logout();
-            Flash::error(\Lang::get("flash.inactive_user"));
+            Flash::error(Lang::get("flash.inactive_user"));
             return redirect(route("login"));
         }
     }

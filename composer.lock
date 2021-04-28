@@ -68,12 +68,12 @@
             "source": {
                 "type": "git",
                 "url": "https://github.com/BrenoFortunato/input-customizer.git",
-                "reference": "3a310f574d422b39e18b6179e3d811d8ac40ea9d"
+                "reference": "be1db9d58a6d759b1f1f721eecd068fa46cd6db0"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/BrenoFortunato/input-customizer/zipball/3a310f574d422b39e18b6179e3d811d8ac40ea9d",
-                "reference": "3a310f574d422b39e18b6179e3d811d8ac40ea9d",
+                "url": "https://api.github.com/repos/BrenoFortunato/input-customizer/zipball/be1db9d58a6d759b1f1f721eecd068fa46cd6db0",
+                "reference": "be1db9d58a6d759b1f1f721eecd068fa46cd6db0",
                 "shasum": ""
             },
             "require": {
@@ -114,7 +114,7 @@
                 "issues": "https://github.com/BrenoFortunato/input-customizer/issues",
                 "source": "https://github.com/BrenoFortunato/input-customizer/tree/master_bootstrap4"
             },
-            "time": "2021-04-27T16:30:01+00:00"
+            "time": "2021-04-28T03:28:36+00:00"
         },
         {
             "name": "brick/math",
