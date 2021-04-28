@@ -2,12 +2,12 @@
 Projeto padrão configurado em Docker utilizando PHP v7.4, Laravel v8.12, InfyOm v8.0 e AdminLTE v3.0.5.
   
 ## Instalação
-Após clonar este repositório, renomeie a pasta criada para o nome do projeto e remova as configurações deste git executando o comando abaixo:
+Após clonar este repositório, renomeie a pasta criada para o nome do projeto. Abra um terminal na pasta do projeto e remova as configurações deste git executando o comando abaixo:
 ```php
 rm -rf .git
 ```
 
-Em seguida, altere o texto "changeme" dos arquivos **.env.example** e **docker-compose.yml**. Adicione o endereço de APP_URL ao arquivo de hosts de seu SO, da seguinte forma:
+Em seguida, altere o texto "changeme" dos arquivos **.env.example** e **docker-compose.yml** e adicione o endereço de APP_URL ao arquivo de hosts do sistema operacional, da seguinte forma:
 ```php
 127.0.0.1           dev.changeme.com.br
 ```
