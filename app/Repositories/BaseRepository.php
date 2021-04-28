@@ -68,7 +68,7 @@ abstract class BaseRepository
      * @param array $columns
      * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator
      */
-    public function paginate($perPage, $columns = ['*'])
+    public function paginate($perPage, $columns = ["*"])
     {
         $query = $this->allQuery();
 
@@ -116,7 +116,7 @@ abstract class BaseRepository
      *
      * @return \Illuminate\Contracts\Pagination\LengthAwarePaginator|\Illuminate\Database\Eloquent\Builder[]|\Illuminate\Database\Eloquent\Collection
      */
-    public function all($search = [], $skip = null, $limit = null, $columns = ['*'])
+    public function all($search = [], $skip = null, $limit = null, $columns = ["*"])
     {
         $query = $this->allQuery($search, $skip, $limit);
 
@@ -147,7 +147,7 @@ abstract class BaseRepository
      *
      * @return \Illuminate\Database\Eloquent\Builder|\Illuminate\Database\Eloquent\Builder[]|\Illuminate\Database\Eloquent\Collection|Model|null
      */
-    public function find($id, $columns = ['*'])
+    public function find($id, $columns = ["*"])
     {
         $query = $this->model->newQuery();
 

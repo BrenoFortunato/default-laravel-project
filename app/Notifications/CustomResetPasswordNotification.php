@@ -44,7 +44,7 @@ class CustomResetPasswordNotification extends Notification implements ShouldQueu
      */
     public function via($notifiable)
     {
-        return ['mail'];
+        return ["mail"];
     }
 
     /**
@@ -63,8 +63,8 @@ class CustomResetPasswordNotification extends Notification implements ShouldQueu
         $logo = asset("/images/logo_color.png");
 
         return (new MailMessage)
-            ->subject('Recuperação de senha')
-            ->action('Notification Action', url(config('app.url').route('password.reset', $this->token, false)))
+            ->subject("Recuperação de senha")
+            ->action("Notification Action", url(config("app.url").route("password.reset", $this->token, false)))
             ->greeting($notifiable->name)
             ->line($logo);
     }

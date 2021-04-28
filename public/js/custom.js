@@ -4,7 +4,7 @@ $.fn.select2.defaults.set("placeholder", "Selecionar");
 
 // Initialize bootstrap switch
 $("input[data-bootstrap-switch]").each(function(){
-    $(this).bootstrapSwitch('state', $(this).prop('checked'));
+    $(this).bootstrapSwitch("state", $(this).prop("checked"));
 });
 
 // Initialize custom file input
@@ -15,12 +15,12 @@ $(document).ready(function() {
 // Initialize loading overlay
 function showLoading() {
     $.LoadingOverlay("show", {
-        // image            : '',
-        imageColor       : '#ccc',
+        // image            : "",
+        imageColor       : "#ccc",
         // text             : customText,
         // textResizeFactor : 0.2,
-        // textColor        : '#fff',
-        background       : 'rgba(0, 0, 0, 0.5)',
+        // textColor        : "#fff",
+        background       : "rgba(0, 0, 0, 0.5)",
         fade             : [200, 200],
     });
 }
@@ -96,18 +96,18 @@ function confirmMessage(e) {
     }
     Swal.fire({
         icon: "question",
-        title: "Você tem certeza?",
-        text: "Não será possível recuperar o registro deletado.",
-        confirmButtonText: "Confirmar",
-        cancelButtonText: "Cancelar",
+        title: confirmationTitle,
+        text: confirmationText,
+        confirmButtonText: confirmButton,
+        cancelButtonText: cancelButton,
         showCloseButton: true,
         showConfirmButton: true,
         showCancelButton: true,
         focusConfirm: false,
         buttonsStyling: false,
         customClass: {
-            confirmButton: 'btn btn-danger',
-            cancelButton: 'btn btn-default',
+            confirmButton: "btn btn-danger",
+            cancelButton: "btn btn-default",
         }
     }).then((result) => {
         if (result.value) {

@@ -31,8 +31,8 @@ class AppBaseController extends Controller
     public function sendSuccess($message)
     {
         return Response::json([
-            'success' => true,
-            'message' => $message
+            "success" => true,
+            "message" => $message
         ], 200);
     }
 }

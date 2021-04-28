@@ -2,6 +2,6 @@
 
 return [
 
-    'users'                       => '[s] Usuário                   |[p] Usuários',
+    "users"                       => "[s] Usuário                   |[p] Usuários",
 
 ];

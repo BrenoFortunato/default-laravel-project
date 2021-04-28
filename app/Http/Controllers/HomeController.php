@@ -29,21 +29,21 @@ class HomeController extends Controller
         //     break;
 
         //     case config("enums.roles.COMPANY_ADMIN.id"):
-        //         return redirect(route('companies.dashboard', [Auth::user()->holding_id, Auth::user()->company_id]));
+        //         return redirect(route("companies.dashboard", [Auth::user()->holding_id, Auth::user()->company_id]));
         //     break;
 
         //     case config("enums.roles.SUBSIDIARY_ADMIN.id"):
-        //         return redirect(route('mySubsidiaries.index', [Auth::user()->holding_id, Auth::user()->company_id]));
+        //         return redirect(route("mySubsidiaries.index", [Auth::user()->holding_id, Auth::user()->company_id]));
         //     break;
 
         //     case config("enums.roles.COMMON.id"):
-        //         return redirect(route('mySubsidiaries.index', [Auth::user()->holding_id, Auth::user()->company_id]));
+        //         return redirect(route("mySubsidiaries.index", [Auth::user()->holding_id, Auth::user()->company_id]));
         //     break;
 
         //     default:
         //         Auth::logout();
-        //         Flash::error(Lang::get('flash.invalid_login'));
-        //         return redirect(route('login'));
+        //         Flash::error(Lang::get("flash.invalid_login"));
+        //         return redirect(route("login"));
         //     break;
         // }
     }

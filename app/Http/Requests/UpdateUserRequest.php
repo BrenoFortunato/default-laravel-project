@@ -26,7 +26,7 @@ class UpdateUserRequest extends FormRequest
     {
         $updateRules = str_replace("id_to_ignore", request()->user_id, User::$rules);
         if (request()->keep_password) {
-            unset($updateRules['password']);
+            unset($updateRules["password"]);
         }
 
         return $updateRules;

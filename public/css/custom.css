@@ -178,7 +178,7 @@ input[type=text]:-moz-read-only {
 }
 
 /* Hide spin buttons on number fields */
-input[type='number'] {
+input[type="number"] {
     -moz-appearance: textfield;
 }
 input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {

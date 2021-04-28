@@ -29,7 +29,7 @@ class User extends Authenticatable implements HasMedia
      *
      * @var string
      */
-    public $table = 'users';
+    public $table = "users";
 
     /**
      * The attributes that should be hidden for arrays.
@@ -37,8 +37,8 @@ class User extends Authenticatable implements HasMedia
      * @var array
      */
     protected $hidden = [
-        'password',
-        'remember_token',
+        "password",
+        "remember_token",
     ];
 
     /**
@@ -47,12 +47,12 @@ class User extends Authenticatable implements HasMedia
      * @var array
      */
     protected $fillable = [
-        'name',
-        'email',
-        'password',
-        'is_active',
-        'photo',
-        'email_verified_at',
+        "name",
+        "email",
+        "password",
+        "is_active",
+        "photo",
+        "email_verified_at",
     ];
 
     /**
@@ -61,13 +61,13 @@ class User extends Authenticatable implements HasMedia
      * @var array
      */
     protected $casts = [
-        'id'                => 'integer',
-        'name'              => 'string',
-        'email'             => 'string',
-        'password'          => 'string',
-        'is_active'         => 'boolean',
-        'photo'             => 'string',
-        'email_verified_at' => 'datetime',
+        "id"                => "integer",
+        "name"              => "string",
+        "email"             => "string",
+        "password"          => "string",
+        "is_active"         => "boolean",
+        "photo"             => "string",
+        "email_verified_at" => "datetime",
     ];
 
     /**
@@ -76,11 +76,22 @@ class User extends Authenticatable implements HasMedia
      * @var array
      */
     public static $rules = [
-        'name'      => 'required|string|max:255',
-        'email'     => 'required|string|email|max:255|unique:users,email,id_to_ignore,id',
-        'password'  => 'required|string|min:6|confirmed',
-        'role_name' => 'required',
-        'is_active' => 'required',
+        "name"      => "required|string|max:255",
+        "email"     => "required|string|email|max:255|unique:users,email,id_to_ignore,id",
+        "password"  => "required|string|min:6|confirmed",
+        "role_name" => "required",
+        "is_active" => "required",
+    ];
+
+    /**
+     * Registration validation rules.
+     *
+     * @var array
+     */
+    public static $registrationRules = [
+        "name"      => "required|string|max:255",
+        "email"     => "required|string|email|max:255|unique:users",
+        "password"  => "required|string|min:6|confirmed",
     ];
 
     /**
@@ -89,12 +100,12 @@ class User extends Authenticatable implements HasMedia
      * @var array
      */
     protected $appends = [
-        'readable_created_at',
-        'readable_updated_at',
-        'readable_email_verified_at',
-        'readable_is_active',
-        'readable_role_name',
-        'role_name',
+        "readable_created_at",
+        "readable_updated_at",
+        "readable_email_verified_at",
+        "readable_is_active",
+        "readable_role_name",
+        "role_name",
     ];
 
     // =========================================================================
@@ -114,7 +125,7 @@ class User extends Authenticatable implements HasMedia
      */
     public function getPhotoAttribute()
     {
-        return $this->attributes['photo']?: asset("images/no_user.png");
+        return $this->attributes["photo"]?: asset("images/no_user.png");
     }
 
     /**
@@ -190,7 +201,7 @@ class User extends Authenticatable implements HasMedia
      */
     public function setPasswordAttribute($value)
     {
-        $value? $this->attributes['password'] = bcrypt($value) : null;
+        $value? $this->attributes["password"] = bcrypt($value) : null;
     }
 
     // =========================================================================
@@ -204,7 +215,7 @@ class User extends Authenticatable implements HasMedia
      */
     public function isPhotoDefault()
     {
-        return $this->attributes['photo']? false : true;
+        return $this->attributes["photo"]? false : true;
     }
 
     /**
@@ -226,6 +237,6 @@ class User extends Authenticatable implements HasMedia
      */
     public function registerMediaCollections(): void
     {
-        $this->addMediaCollection('users')->singleFile();
+        $this->addMediaCollection("users")->singleFile();
     }
 }

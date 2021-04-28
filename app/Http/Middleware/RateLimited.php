@@ -16,7 +16,7 @@ class RateLimited
      */
     public function handle($job, $next)
     {
-        Redis::throttle('key')
+        Redis::throttle("key")
             ->block(0)
             ->allow(1)
             ->every(10)

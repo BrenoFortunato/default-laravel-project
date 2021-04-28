@@ -2,11 +2,16 @@
 
 namespace App\Http\Controllers\Auth;
 
+use DB;
+use Lang;
+use Flash;
+use App\Models\User;
 use App\Http\Controllers\Controller;
 use App\Providers\RouteServiceProvider;
-use App\Models\User;
+use Illuminate\Http\Request;
+use Illuminate\Http\JsonResponse;
+use Illuminate\Auth\Events\Registered;
 use Illuminate\Foundation\Auth\RegistersUsers;
-use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 
 class RegisterController extends Controller
@@ -38,36 +43,79 @@ class RegisterController extends Controller
      */
     public function __construct()
     {
-        $this->middleware('guest');
+        $this->middleware("guest");
     }
 
     /**
      * Get a validator for an incoming registration request.
      *
      * @param  array  $data
+     * 
      * @return \Illuminate\Contracts\Validation\Validator
      */
     protected function validator(array $data)
     {
-        return Validator::make($data, [
-            'name' => ['required', 'string', 'max:255'],
-            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
-            'password' => ['required', 'string', 'min:8', 'confirmed'],
-        ]);
+        return Validator::make($data, User::$registrationRules);
     }
 
     /**
      * Create a new user instance after a valid registration.
      *
      * @param  array  $data
+     * 
      * @return \App\Models\User
      */
     protected function create(array $data)
     {
-        return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => Hash::make($data['password']),
-        ]);
+        DB::beginTransaction();
+
+        try {
+            // Create user
+            $user = User::create([
+                "name"              => $data["name"],
+                "email"             => $data["email"],
+                "password"          => $data["password"],
+                "is_active"         => true,
+                "photo"             => null,
+                "email_verified_at" => null,
+            ]);
+
+            // Assign role
+            $user->assignRole(config("enums.roles.COMMON.name"));
+        } catch (\Exception $e) {
+            DB::rollback();
+            return false;
+        }
+
+        DB::commit();
+        return $user;
+    }
+
+    /**
+     * Handle a registration request for the application.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * 
+     * @return \Illuminate\Http\Response
+     */
+    public function register(Request $request)
+    {
+        $input = $request->all();
+        $this->validator($input)->validate();
+    
+        $user = $this->create($input);
+        if (!$user) {
+            Flash::error(Lang::get("flash.registration_unexpected_error"));
+            return redirect()->back()->withInput($input);
+        }
+
+        event(new Registered($user));
+        $this->guard()->login($user);
+
+        if ($response = $this->registered($request, $user)) {
+            return $response;
+        }
+
+        return $request->wantsJson()? new JsonResponse([], 201) : redirect($this->redirectPath());
     }
 }

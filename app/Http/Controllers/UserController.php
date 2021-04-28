@@ -121,7 +121,7 @@ class UserController extends AppBaseController
 
         $input = $request->all();
         $user = $this->userRepository->update($input, $user->id);
-        $user->syncRoles($input['role_name']);
+        $user->syncRoles($input["role_name"]);
 
         Flash::success(Lang::choice("tables.users", "s")." ".Lang::choice("flash.updated", "m"));
         return redirect(route("users.index"));

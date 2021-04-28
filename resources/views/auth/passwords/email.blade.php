@@ -3,12 +3,6 @@
 @section("content")
     <p class="login-box-msg">{{ Lang::get("auth.enter_mail") }}</p>
 
-    @if(session("status"))
-        <div class="alert alert-success">
-            {{ session("status") }}
-        </div>
-    @endif
-
     <form method="post" action="{{ route('password.email') }}">
         @csrf
 

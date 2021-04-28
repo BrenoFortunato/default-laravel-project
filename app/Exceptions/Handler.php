@@ -2,6 +2,7 @@
 
 namespace App\Exceptions;
 
+use Lang;
 use Flash;
 use Throwable;
 use Illuminate\Foundation\Exceptions\Handler as ExceptionHandler;
@@ -23,8 +24,8 @@ class Handler extends ExceptionHandler
      * @var array
      */
     protected $dontFlash = [
-        'password',
-        'password_confirmation',
+        "password",
+        "password_confirmation",
     ];
 
     /**
@@ -52,13 +53,13 @@ class Handler extends ExceptionHandler
         if ($this->isHttpException($exception)) {
             switch ($exception->getStatusCode()) {
                 case 404:
-                    Flash::error(Lang::get('flash.404'));
-                    return app('App\Http\Controllers\HomeController')->index();
+                    Flash::error(Lang::get("flash.404"));
+                    return app("App\Http\Controllers\HomeController")->index();
                     break;
 
                 case 403:
-                    Flash::error(Lang::get('flash.403'));
-                    return app('App\Http\Controllers\HomeController')->index();
+                    Flash::error(Lang::get("flash.403"));
+                    return app("App\Http\Controllers\HomeController")->index();
                     break;
 
                 default:

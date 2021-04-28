@@ -82,6 +82,14 @@
     <script src="{{ asset('js/moment.min.js') }}"></script>
     <script src="{{ asset('js/moment-pt-br.min.js') }}"></script>
 
+    {{-- PHP Variables to Custom Js --}}
+    <script type="text/javascript">
+        const confirmationTitle = @json(Lang::get("text.confirmation_title"));
+        const confirmationText = @json(Lang::get("text.confirmation_text"));
+        const confirmButton = @json(Lang::get("text.confirm"));
+        const cancelButton = @json(Lang::get("text.cancel"));
+    </script>
+
     {{-- Custom JS --}}
     <script src="{{ asset('js/custom.js') }}"></script>
 

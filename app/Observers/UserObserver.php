@@ -41,24 +41,24 @@ class UserObserver
         if (request()->photo) {
             User::withoutEvents(function () use ($user) {
                 // Delete previous image
-                $media = $user->getFirstMedia('users');
+                $media = $user->getFirstMedia("users");
                 if ($media) {
-                    File::deleteDirectory(preg_split('~/(?=[^/]*$)~', $media->getPath())[0]);
+                    File::deleteDirectory(preg_split("~/(?=[^/]*$)~", $media->getPath())[0]);
                     $media->delete();
                 }
 
                 // Delete image
-                if (request()->photo=='delete') {
+                if (request()->photo=="delete") {
                     $user->photo = null;
 
                 // Add image from file (web)
                 } elseif (file_exists(request()->photo)) {
-                    $media = $user->addMedia(request()->photo)->toMediaCollection('users');
+                    $media = $user->addMedia(request()->photo)->toMediaCollection("users");
                     $user->photo = $media->getFullUrl();
                 
                 // Add image from base64 (api)
                 } else {
-                    $media = $user->addMediaFromBase64(request()->photo)->toMediaCollection('users');
+                    $media = $user->addMediaFromBase64(request()->photo)->toMediaCollection("users");
                     $user->photo = $media->getFullUrl();
                 }
 

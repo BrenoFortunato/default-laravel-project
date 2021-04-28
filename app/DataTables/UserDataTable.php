@@ -34,7 +34,7 @@ class UserDataTable extends DataTable
         );
 
         return DataTables::of($users)
-            ->filterColumn('readable_role_name', function ($query, $keyword) {
+            ->filterColumn("readable_role_name", function ($query, $keyword) {
                 $query->whereRaw("(
                                     SELECT roles.display_name
                                     FROM roles
@@ -42,7 +42,7 @@ class UserDataTable extends DataTable
                                     WHERE model_has_roles.model_id = users.id
                                 ) like ?", ["%{$keyword}%"]);
             })
-            ->filterColumn('readable_is_active', function ($query, $keyword) {
+            ->filterColumn("readable_is_active", function ($query, $keyword) {
                 $query->whereRaw("(CASE
                                     WHEN users.is_active=true  THEN 'Sim'
                                     WHEN users.is_active=false THEN 'Não'
