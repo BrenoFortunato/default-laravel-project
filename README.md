@@ -7,7 +7,7 @@ Após clonar este repositório, renomeie a pasta criada para o nome do projeto. 
 rm -rf .git
 ```
 
-Em seguida, altere o texto "changeme" dos arquivos **.env.example** e **docker-compose.yml** e adicione o endereço de APP_URL ao arquivo de hosts do sistema operacional, da seguinte forma:
+Em seguida, altere o texto "changeme" dos arquivos **.env.example** e **docker-compose.yml**. Duplique o arquivo **.env.example** e renomeie-o para **.env**. Por fim, adicione o endereço de APP_URL ao arquivo de hosts do sistema operacional, da seguinte forma:
 ```php
 127.0.0.1           dev.changeme.com.br
 ```
