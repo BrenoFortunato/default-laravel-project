@@ -8,17 +8,15 @@ rm -rf .git
 ```
 Altere o texto "changeme" dos arquivos **.env.example** e **docker-compose.yml**.
 
-Para subir o projeto, abra um terminal em sua pasta e execute:
+Para subir o projeto, abra um terminal na pasta do projeto e execute o comando abaixo. Deixe este terminal executando enquanto estiver utilizando o projeto:
 ```php
 make up
 ```
-Deixe este terminal executando enquanto estiver utilizando o projeto.
 
-Para acessar o bash do Docker, abra um novo terminal na pasta do projeto e execute:
+Para acessar o bash do Docker, abra um novo terminal na pasta do projeto e execute o comando abaixo. Todos os comandos do Laravel (*php artisan*, *composer update*, etc.) devem ser executados dentro deste bash:
 ```php
 make sh
 ```
-Quando um projeto estiver usando Docker, todos os comandos devem ser executados dentro deste bash.
 
 Para acessar o banco do Docker, abra um novo terminal na pasta do projeto e execute:
 ```php
@@ -47,5 +45,5 @@ Após a geração dos CRUDs, verificar os arquivos criados conforme as orientaç
 - Conferir formulários, validações e adicionar máscaras
 - Atualizar ícones do menu lateral
 - Atualizar cores em "public/css/custom_colors.css"
-- Atualizar e-mails em "resources/views/vendor/notifications"
-- Procurar no código por "TODO:" e corrigir o que for necessário
+- Atualizar cores dos e-mails em "resources/views/vendor/notifications"
+- Procurar no código por "TODO:" e finalizar o que faltar
