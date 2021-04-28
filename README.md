@@ -2,7 +2,7 @@
 Projeto padrão configurado em Docker utilizando PHP v7.4, Laravel v8.12, InfyOm v8.0 e AdminLTE v3.0.5.
   
 ## Instalação
-Após clonar este repositório, renomeie a pasta para o nome do projeto e remova as configurações do git com:
+Após clonar este repositório, renomeie a pasta criada para o nome do projeto e remova as configurações deste git com:
 ```php
 rm -rf .git
 ```
@@ -13,7 +13,7 @@ Para subir o projeto, abra um terminal na pasta do projeto e execute o comando a
 make up
 ```
 
-Para acessar o bash do Docker, abra um novo terminal na pasta do projeto e execute o comando abaixo. Todos os comandos do Laravel (*php artisan*, *composer update*, etc.) devem ser executados dentro deste bash:
+Para acessar o bash do Docker, abra um novo terminal na pasta do projeto e execute o comando abaixo. Todos os comandos do Laravel ("php artisan", "composer update", etc.) devem ser executados dentro deste bash:
 ```php
 make sh
 ```
@@ -24,7 +24,7 @@ make sh:db
 ```
 
 ## Geração dos CRUDs
-Coloque os JSONs na raiz do projeto, dentro da pasta **jsons**. Em seguida, execute o comando abaixo para cada json, corrigindo "ModelName", "table_name" e "00_table_name" para o que for adequado:
+Coloque os jsons na raiz do projeto, dentro da pasta **jsons**. Em seguida, execute o comando abaixo para cada json, corrigindo "ModelName", "table_name" e "00_table_name" de acordo com o CRUD a ser gerado:
 ```php
 php artisan infyom:scaffold ModelName --tableName=table_name --datatables=true --paginate=25 --fieldsFile=/jsons/00_table_name.json
 ```
