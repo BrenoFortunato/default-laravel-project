@@ -147,7 +147,7 @@ class UserController extends AppBaseController
 
         try { 
             $this->userRepository->delete($user->id);
-        } catch(\Exception $e) {
+        } catch(\Throwable $e) {
             Flash::error(Lang::choice("tables.users", "s")." ".Lang::choice("flash.not_deleted", "m"));
             return redirect(route("users.index"));
         }

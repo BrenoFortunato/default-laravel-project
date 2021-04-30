@@ -134,7 +134,7 @@ class $MODEL_NAME$Controller extends AppBaseController
 
         try { 
             $this->$MODEL_NAME_CAMEL$Repository->delete($$MODEL_NAME_CAMEL$->id);
-        } catch(\Exception $e) {
+        } catch(\Throwable $e) {
             Flash::error(Lang::choice("tables.$MODEL_NAME_PLURAL_SNAKE$", "s")." ".Lang::choice("flash.not_deleted", "TODO:"));
             return redirect(route("$ROUTE_NAMED_PREFIX$$MODEL_NAME_PLURAL_CAMEL$.index"));
         }

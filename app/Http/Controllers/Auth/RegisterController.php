@@ -82,7 +82,7 @@ class RegisterController extends Controller
 
             // Assign role
             $user->assignRole(config("enums.roles.COMMON.name"));
-        } catch (\Exception $e) {
+        } catch (\Throwable $e) {
             DB::rollback();
             return false;
         }
