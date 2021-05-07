@@ -2,7 +2,6 @@
 
 namespace App\Services;
 
-use DB;
 use Lang;
 use Carbon;
 
@@ -363,15 +362,5 @@ class Functions
         }
 
         return "#" . implode($hexcolor);
-    }
-
-    /**
-     * Add timestamp to data before insering into database.
-     * 
-     * @return array
-     */
-    public static function addTimestamp($data)
-    {
-        return array_merge($data, ["created_at" => DB::raw("CURRENT_TIMESTAMP"), "updated_at" => DB::raw("CURRENT_TIMESTAMP")]);
     }
 }

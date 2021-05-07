@@ -7,11 +7,11 @@ ARG GID=1000
 ARG APP_ENV=development
 ENV APP_ENV=${APP_ENV}
 
-ADD https://dl.bintray.com/php-alpine/key/php-alpine.rsa.pub /etc/apk/keys/php-alpine.rsa.pub
+ADD https://packages.whatwedo.ch/php-alpine.rsa.pub /etc/apk/keys/php-alpine.rsa.pub
 
 RUN apk --update-cache add ca-certificates openssl bash git grep \
     dcron tzdata su-exec shadow supervisor && \
-    echo "https://dl.bintray.com/php-alpine/v3.11/php-7.4" >> /etc/apk/repositories
+    echo "https://packages.whatwedo.ch/php-alpine/v3.11/php-7.4" >> /etc/apk/repositories
 
 RUN wget -O /sbin/wait-for.sh https://raw.githubusercontent.com/eficode/wait-for/v2.1.0/wait-for && chmod +x /sbin/wait-for.sh
 

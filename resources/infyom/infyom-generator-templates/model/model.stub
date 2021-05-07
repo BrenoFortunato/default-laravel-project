@@ -2,21 +2,20 @@
 
 namespace $NAMESPACE_MODEL$;
 
-use App\Services\Functions;
 use $NAMESPACE_MODEL_EXTEND$ as Model;
+use App\Services\Functions;
 $HAS_FACTORY_IMPORT$
 
 $DOCS$
 class $MODEL_NAME$ extends Model
 {
 $HAS_FACTORY$
-
     /**
      * The table associated with the model.
      *
      * @var string
      */
-    public $table = '$TABLE_NAME$';
+    public $table = "$TABLE_NAME$";
 
     /**
      * The attributes that are mass assignable.
@@ -51,8 +50,8 @@ $HAS_FACTORY$
      * @var array
      */
     protected $appends = [
-        'readable_created_at',
-        'readable_updated_at',
+        "readable_created_at",
+        "readable_updated_at",
     ];
 
     // =========================================================================

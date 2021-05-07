@@ -160,6 +160,9 @@ ol.breadcrumb {
 .sidebar .nav-link:hover {
     background-color: #2ead74 !important;
 }
+.sidebar .nav-link:focus {
+    background-color: #2ead74 !important;
+}
 .sidebar .nav-link.active {
     background-color: #2ead74 !important;
 }

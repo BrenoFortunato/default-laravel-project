@@ -35,12 +35,14 @@ php artisan infyom:scaffold ModelName --tableName=table_name --datatables=true -
 
 ## Configuração Inicial
 Após a geração dos CRUDs, verificar os arquivos criados conforme as orientações a seguir:
-- Conferir migrations;
+- Adicionar novos campos na migration de usuário;
+- Conferir demais migrations;
 - Atualizar "config/enums.php";
 - Atualizar "database/seeders/SetupSeeder.php";
 - Criar "database/seeders/DummySeeder.php";
+- Atualizar arquivos de linguagem;
+- Atualizar models que utilizam arquivos, seus formulários ("files" => true) e criar observers ("AppServiceProvider");
 - Atualizar model de usuário;
-- Atualizar models que utilizam arquivos, seus formulários ("files" => true) e criar observers ;("AppServiceProvider")
 - Corrigir hierarquia de menus e rotas, criando os middlewares necessários;
 - Nas controllers, utilizar find em "current-entity" invés de no repositório;
 - Mos models, criar atributos readable e setters necessários;

@@ -13,7 +13,7 @@ class Create$TABLE_NAME_TITLE$Table extends Migration
      */
     public function up()
     {
-        Schema::create('$TABLE_NAME$', function (Blueprint $table) {
+        Schema::create("$TABLE_NAME$", function (Blueprint $table) {
             $FIELDS$
         });
     }
@@ -25,6 +25,6 @@ class Create$TABLE_NAME_TITLE$Table extends Migration
      */
     public function down()
     {
-        Schema::drop('$TABLE_NAME$');
+        Schema::drop("$TABLE_NAME$");
     }
 }

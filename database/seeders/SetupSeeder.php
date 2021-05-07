@@ -21,7 +21,6 @@ class SetupSeeder extends Seeder
         // $holdings = [
         //     [
         //         "name"        => "Holding Name",
-        //         "description" => null,
         //         "created_at"  => $currentTimestamp,
         //         "updated_at"  => $currentTimestamp,
         //     ],
