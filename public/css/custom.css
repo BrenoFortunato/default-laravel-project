@@ -65,7 +65,7 @@
     margin-top: 10px !important;
 }
 .icheck-material-primary:last-child {
-    margin-bottom: -8px !important;
+    margin-bottom: -5px !important;
 }
 .icheck-material-primary > input:first-child:not(:checked):not(:disabled):hover + label::before,
 .icheck-material-primary > input:first-child:not(:checked):not(:disabled):hover + input[type="hidden"] + label::before {
@@ -110,8 +110,7 @@ section.content {
 
 /* Change blockquote default css */
 blockquote {
-    margin-bottom: 10px;
-    padding: 10px;
+    margin: 0;
     font-size: inherit;
 }
 
@@ -253,7 +252,7 @@ input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
 /* User dropdowm menu */
 .navbar-nav .dropdown-menu {
     top: 46px !important;
-    right: -8px !important;
+    right: -5px !important;
 }
 .user-image.img-circle {
     margin-top: -5px !important;
@@ -401,18 +400,34 @@ table.dataTable .btn-group button {
 
 
 /* Static table */
-table {
+.table-static {
+    border-top: none;
     margin-bottom: 0 !important;
 }
-table td {
+.table-static td {
     vertical-align: middle !important;
 }
-table .table-header {
+.table-static .table-header {
     width: 50%;
     min-width: 150px;
+    vertical-align: middle !important;
 }
-table .table-last-colum {
+.table-static .table-last-colum {
     text-align: center !important;
+}
+.table-static .table-header label {
+    margin-bottom: 0;
+}
+.table-static .btn-success,
+.table-static .btn-danger {
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.table-static i {
+    font-size: 15px;
 }
 
 /* Allow table to have x scroll */
@@ -609,6 +624,13 @@ table .table-last-colum {
 .restrict-link {
     width: 10%;
     margin-bottom: 12px;
+}
+
+/* Download file */
+.download-file {
+    width: max-content;
+    display: block;
+    margin-bottom: 10px;
 }
 
 /* Color preview */

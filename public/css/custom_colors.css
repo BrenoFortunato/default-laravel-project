@@ -130,9 +130,16 @@ a:focus {
     color: #acb3b9 !important;
 }
 
+/* Form readable */
+input[type="text"]:read-only {
+    background-color: #f0f2f4 !important;
+}
+
 /* Change blockquote default css */
 blockquote {
-    color: #777 !important;
+    color: #777;
+    border-color: #2ead74;
+    background-color: #F1F3F4 !important;
 }
 
 /* Don't change readonly input border color */
