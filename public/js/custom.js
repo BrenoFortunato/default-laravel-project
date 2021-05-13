@@ -71,10 +71,11 @@ $(document).on("change", "input[type=file]", function() {
             elem.addClass("img-thumbnail")
         }
         reader.readAsDataURL(this.files[0]);
+        $(this).next("label").text(this.files[0].name);
     }
 
     // Update placeholder color
-    $(this).next().css("color", "#495057");
+    $(this).next("label").css("color", "#495057");
 });
 $(window).on("load", function(){
     setTimeout(function() {

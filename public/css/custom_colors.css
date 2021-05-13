@@ -244,6 +244,28 @@ ol.breadcrumb {
     color: #FFF !important;
 }
 
+/* Success button */
+.btn-success {
+    background-color: #3399ff !important;
+    border-color:  #0a85ff !important;
+    color: #FFF !important;
+}
+.btn-success:hover {
+    background-color: #0a85ff !important;
+    border-color:  #0070e0 !important;
+    color: #FFF !important;
+}
+.btn-success:active {
+    background-color: #0a85ff !important;
+    border-color:  #0070e0 !important;
+    color: #FFF !important;
+}
+.btn-success:focus {
+    background-color: #0a85ff !important;
+    border-color:  #0070e0 !important;
+    color: #FFF !important;
+}
+
 /* Default button */
 .btn-default {
     background-color: #f4f4f4 !important;

@@ -621,6 +621,10 @@ table.dataTable .btn-group button {
     max-height: 30vh;
     padding: 5px;
 }
+.img-thumbnail-small {
+    width: 75px;
+    height: 75px;
+}
 .restrict-link {
     width: 10%;
     margin-bottom: 12px;
@@ -723,6 +727,13 @@ table.dataTable .btn-group button {
     flex-direction: row;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+}
+.row-align-left-vertical-top {
+    display: flex;
+    flex-direction: row;
+    align-items: left;
+    justify-content: flex-start;
     flex-wrap: wrap;
 }
 .side-by-side {
