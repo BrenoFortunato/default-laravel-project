@@ -120,6 +120,10 @@ class UserController extends AppBaseController
         }
 
         $input = $request->all();
+        if ($user->id == Auth::user()->id && !$input["is_active"]) {
+            Flash::error(Lang::get("flash.self_inactivate"));
+            return redirect()->back()->withInput($input);
+        }
         $user = $this->userRepository->update($input, $user->id);
         $user->syncRoles($input["role_name"]);
 

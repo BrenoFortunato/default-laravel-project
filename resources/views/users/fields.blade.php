@@ -89,7 +89,7 @@
 {{-- Submit Field --}}
 <div class="form-group col-md-12 no-margin">
     {{ Form::submit(Lang::get("text.save"), ["class" => "btn btn-primary"]) }}
-    <a href="{{ route("users.index") }}" class="btn btn-default">{{ Lang::get("text.cancel") }}</a>
+    <a href="{{ route('users.index') }}" class="btn btn-default">{{ Lang::get("text.cancel") }}</a>
 </div>
 
 @push("js")

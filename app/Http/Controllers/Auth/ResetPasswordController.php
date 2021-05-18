@@ -27,4 +27,18 @@ class ResetPasswordController extends Controller
      * @var string
      */
     protected $redirectTo = RouteServiceProvider::HOME;
+
+    /**
+     * Get the password reset validation rules.
+     *
+     * @return array
+     */
+    protected function rules()
+    {
+        return [
+            "token"    => "required",
+            "email"    => "required|string|email|max:255",
+            "password" => "required|string|min:6|confirmed",
+        ];
+    }
 }

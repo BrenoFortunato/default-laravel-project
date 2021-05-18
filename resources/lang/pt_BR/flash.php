@@ -34,6 +34,7 @@ return [
     "invalid_role"                  => "O perfil selecionado não é válido.",
     "invalid_login"                 => "Você não tem permissão para acessar o sistema.",
     "self_delete"                   => "Você não pode deletar o seu próprio usuário!",
+    "self_inactivate"               => "Você não pode inativar o seu próprio usuário!",
     "inactive_user"                 => "Seu usuário foi desativado.",
     "registration_unexpected_error" => "Não foi possível concluir seu cadastro, um erro inesperado aconteceu.",
 

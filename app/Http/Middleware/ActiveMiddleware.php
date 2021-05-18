@@ -3,8 +3,9 @@
 namespace App\Http\Middleware;
 
 use Auth;
-use Closure;
+use Lang;
 use Flash;
+use Closure;
 
 class ActiveMiddleware
 {
