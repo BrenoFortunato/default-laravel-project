@@ -31,7 +31,7 @@ class $MODEL_NAME$Controller extends AppBaseController
      * Display a listing of the $MODEL_NAME$.
      *
      * @param $MODEL_NAME$DataTable $$MODEL_NAME_CAMEL$DataTable
-
+     *
      * @return Response
      */
     public function index($MODEL_NAME$DataTable $$MODEL_NAME_CAMEL$DataTable)

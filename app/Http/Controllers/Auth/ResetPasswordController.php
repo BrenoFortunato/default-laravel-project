@@ -41,4 +41,17 @@ class ResetPasswordController extends Controller
             "password" => "required|string|min:6|confirmed",
         ];
     }
+
+    /**
+     * Set the user's password.
+     *
+     * @param  \Illuminate\Contracts\Auth\CanResetPassword  $user
+     * @param  string  $password
+     * 
+     * @return void
+     */
+    protected function setUserPassword($user, $password)
+    {
+        $user->password = $password;
+    }
 }

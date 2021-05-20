@@ -33,7 +33,7 @@ class UserController extends AppBaseController
      * Display a listing of the User.
      *
      * @param UserDataTable $userDataTable
-
+     *
      * @return Response
      */
     public function index(UserDataTable $userDataTable)
